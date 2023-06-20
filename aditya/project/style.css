@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("images/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+} 
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39,0.6), transparent);
+    z-index: 100;
+
+}
+
+.nav-logo p{
+    color: yellow;
+    font-size: 25px;
+    font-weight: 600;
+}
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{ 
+    list-style-type: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: yellow;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid yellow;
+
+}
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s, ease;
+}
+.nav-menu-btn{
+    color: yellow;
+}
+.btn:hover{
+    background: rgba(215, 243, 3, 0.951);
+}
+#registerbtn{
+    margin-left: 15px;
+}
+.btn.white-btn{
+    background: rgba(215, 243, 3, 0.951);
+}
+.btn.btn.white-btn:hover{
+    background: rgba(128, 123, 123, 0.951);
+}
+.nav-menu-btn{
+    display: nones;
+}
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: px;
+    justify-content: center;
+    width: 512px;
+    height: 420px;
+   overflow: hidden;
+    z-index: 2;
+}
+.login-container{
+    position: absolute;
+    left: 60px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.register-container{
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.top span{
+    color: yellow;
+    font-size: small;
+    margin-left: -100px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.top span a{
+    font-weight: 500;
+    color: aliceblue;
+    margin-top: -1px;
+    margin-left: 5px;
+}
+header{
+    color: aliceblue;
+    margin-left: -100px;
+    font-size: 30px;
+    text-align: center;
+    padding: -10px 0 30px 0;
+}
+.two-forms{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-field{
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    color: aliceblue;
+    margin-top: 8px;
+    margin-left: 5px;
+    height: 50px;
+    width: 90%;
+    padding: 0 5px 0 25px;
+    border: none;
+    border-radius:  30px;
+    outline: none;
+    transition: .2s ease;
+}
+.input-field:hover, .input-field:focus{
+    background: rgba(255, 255, 255, 0.4);
+
+}
+::-webkit-input-placeholder{
+    color: aliceblue;
+    left: 100px;
+}
+.input-box i{
+    position: relative;
+    top: 1px;
+    left: -446px;
+    color: aliceblue;
+}
+.Submit{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    margin-top: 10px ;
+    height: 45px;
+    width: 90%;
+    margin-left: 5px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3 ease-in-out;
+
+}
+.Submit:hover{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1 px rgba(0, 0, 0, 0.2);
+
+}
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    font-size: small;
+    margin-top: -2px;
+}
+.two-col .one{
+    display: flex;
+    gap: 5px;
+}
+.two label a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 55px;
+}
+.two label a:hover{
+    text-decoration: underline;
+}
+ 
