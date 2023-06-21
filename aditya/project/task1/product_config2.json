@@ -1,0 +1,12 @@
+{
+  "user" : {
+    "total" : 40,
+    "concurrent_user" : 20
+  },
+  "products" : {
+    "ctrm" : false,
+    "treasury" : true,
+    "ois" : false,
+    "npk" : true
+  }
+}
