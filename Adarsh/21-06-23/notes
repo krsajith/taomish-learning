@@ -1,0 +1,276 @@
+1) Semantic HTML
+    Semantic means "relating to meaning". Writing semantic HTML means using HTML elements to structure your content based on each element's meaning, not its appearance.
+     Example : 
+        <header>
+        <h1>Three words</h1>
+        <nav>
+            <a>one word</a>
+            <a>one word</a>
+            <a>one word</a>
+            <a>one word</a>
+        </nav>
+        </header>
+        <main>
+        <header>
+            <h1>five words</h1>
+        </header>
+        <section>
+            <h2>three words</h2>
+            <p>forty-six words</p>
+            <p>forty-four words</p>
+        </section>
+        <section>
+            <h2>seven words</h2>
+            <p>sixty-eight words</p>
+            <p>forty-four words</p>
+        </section>
+        </main>
+        <footer>
+        <p>five words</p>
+        </footer>
+
+2) Document structure 
+
+    2.1) <html>
+            The <html> element is the root element and it defines the whole HTML document.
+    
+    2.2) <body>
+            The <body> element defines the document's body.
+
+    2.3) <main> 
+            There's a single <main> landmark element. The <main> element identifies the main content of the document. There should be only one <main> per page.
+
+    2.4) <aside> 
+            The <aside> is for content that is indirectly or tangentially related to the document's main content.
+
+    2.5) <article>
+            An <article> represents a complete, or self-contained, section of content that is, in principle, independently reusable.
+
+    2.6) <section> 
+            The <section> element is used to encompass generic standalone sections of a document when there is no more specific semantic element to use. Sections should have a heading, with very few exceptions.
+
+
+3) Nested HTML Elements
+            
+     HTML elements can contain other elements.
+     Example:
+        <!DOCTYPE html>
+        <html>
+        <body>
+
+        <h1>My First Heading</h1>
+        <p>My first paragraph.</p>
+
+        </body>
+        </html>
+
+4) HTML Elements
+
+    4.1) Headings: <h1>-<h6>
+           Heading elements are used to There are six section heading elements: <h1>, <h2>, <h3>, <h4>, <h5>, and <h6>.
+   
+    4.2) The <p> element defines a paragraph.
+
+    4.3) The <br> tag defines a line break, and is an empty element without a closing tag
+
+5) HTML Attributes
+
+    Attributes provide additional information about elements. Attributes are always specified in the start tag.
+    Absolute URL - Links to an external image that is hosted on another website
+
+
+    5.1) The href Attribute
+            The <a> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to.
+            Example: <a href="https://www.learninghtml.com">To learn HTML</a>
+    
+    5.2) The src Attribute
+            The <img> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed.
+            Example: <img src="img_girl.jpg">
+            There are two ways to specify the URL in the src attribute:
+            Absolute URL - Links to an external image that is hosted on another website
+            Relative URL - Links to an image that is hosted within the website. Here, the URL does not include the domain name.
+   
+    5.3) The style Attribute
+            The style attribute is used to add styles to an element, such as color, font, size, and more.
+    
+    5.4) The lang Attribute
+            You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
+
+6) HTML Formatting Elements
+    Formatting elements were designed to display special types of text:
+
+        <b> - Bold text
+        <strong> - Important text
+        <i> - Italic text
+        <em> - Emphasized text
+        <mark> - Marked text
+        <small> - Smaller text
+        <del> - Deleted text ( <del> element defines text that has been deleted from a document.
+                               Browsers will usually strike a line    through deleted text)
+        <ins> - Inserted text (<ins> element defines a text that has been inserted into a document.
+                                Browsers will usually underline inserted text:)
+        <sub> - Subscript text
+        <sup> - Superscript text
+
+7) HTML Comments : HTML comments are not displayed in the browser, but they can help document your HTML source code.
+                   Syntax : <!-- Write your comments here -->
+
+8) HTML Colors : HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
+
+9) Styling using CSS (Cascading Style Sheets)
+    Cascading Style Sheets (CSS) is used to format the layout of a webpage.With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!
+
+    CSS can be added to HTML documents in 3 ways:
+
+        Inline - by using the style attribute inside HTML elements
+        Internal - by using a <style> element in the <head> section
+        External - by using a <link> element to link to an external CSS file
+    
+    9.1) External CSS
+          An external style sheet is used to define the style for many HTML pages.
+          To use an external style sheet, add a link to it in the <head> section of each HTML page:
+            Example: 
+            firstPage.html
+                
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <link rel="stylesheet" href="styles.css">
+                </head>
+                <body>
+
+                <h1>This is a heading</h1>
+                <p>This is a paragraph.</p>
+
+                </body>
+                </html>
+
+            style.css
+                
+                body {
+                background-color: powderblue;
+                }
+                h1 {
+                color: blue;
+                }
+                p {
+                color: red;
+                }
+    
+    9.2) CSS Colors, Fonts and Sizes
+            The CSS color property defines the text color to be used.
+            The CSS font-family property defines the font to be used.
+            The CSS font-size property defines the text size to be used.
+
+            Example:
+          
+                style.css
+                
+                h1 {
+                color: blue;
+                font-family: verdana;
+                font-size: 300%;
+                }
+                p {
+                color: red;
+                font-family: courier;
+                font-size: 160%;
+                }
+
+    9.3) CSS Border,CSS Padding,CSS Margin
+            The CSS border property defines a border around an HTML element.
+            The CSS padding property defines a padding (space) between the text and the border
+            The CSS margin property defines a margin (space) outside the border.
+            
+            Example:
+
+                Style.css
+               
+                p {
+                border: 2px solid powderblue;
+                padding: 30px;
+                margin: 50px;
+                }
+
+10) HTML Links - Hyperlinks
+        HTML links are hyperlinks.
+        You can click on a link and jump to another document.
+        The HTML <a> tag defines a hyperlink.
+        Syntax: <a href="url">link text</a>
+    
+    10.1) target Attribute:
+            The target attribute specifies where to open the linked document.
+            The target attribute can have one of the following values:
+
+                _self - Default. Opens the document in the same window/tab as it was clicked
+                _blank - Opens the document in a new window or tab
+                _parent - Opens the document in the parent frame
+                _top - Opens the document in the full body of the window
+  
+     10.2) Link to an Email Address
+            use mailto: inside the href attribute to create a link that opens the user's email program
+            syntax: <a href="mailto:someone@example.com">Send email</a>
+     
+     10.3) Button as a Link
+            To use an HTML button as a link, you have to add some JavaScript code.
+            syntax: <button onclick="document.location='default.asp'">HTML Tutorial</button>
+
+11) HTML Link Colors
+        You can change the link state colors, by using CSS
+
+        Example: 
+       
+        style.css
+                a:link {
+                color: green;
+                }
+
+                a:visited {
+                color: pink;
+                }
+
+                a:hover {
+                color: red;
+                }
+
+                a:active {
+                color: yellow;
+                }
+        11.1) Link Buttons
+                A link can also be styled as a button, by using CSS
+
+                Example:
+
+                style.css
+                        a:link, a:visited {
+                        background-color: #f44336;
+                        color: white;
+                        padding: 15px 25px;
+                        text-align: center;
+                        display: inline-block;
+                        }
+
+                        a:hover, a:active {
+                        background-color: red;
+                        }
+
+12) HTML image  
+        The HTML <img> tag is used to embed an image in a web page.
+        Images are not technically inserted into a web page, images are linked to web pages. 
+        The <img> tag creates a holding space for the referenced image.
+        syntax: <img src="url" alt="alternative text">
+        
+        12.1) Image as a Link
+                To use an image as a link, put the <img> tag inside the <a> tag
+        12.2) Image Floating
+                Use the CSS float property to let the image float to the right or to the left of a text
+        12.3) Image Maping
+        The HTML <map> tag defines an image map. An image map is an image with clickable areas.
+                The areas are defined with one or more <area> tags.
+                Example      
+                        <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+                        <map name="workmap">
+                        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+                        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+                        </map>
