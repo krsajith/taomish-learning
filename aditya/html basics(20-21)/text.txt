@@ -1,0 +1,44 @@
+The closing tag is the same tag as the opening tag, preceded by a slash.
+written using angle brackets (< and >).
+
+Some omitted closing tags cause bigger issues: not closing some tags, such as <script>, <style>, <template>, <textarea>, and <title>, breaks subsequent content
+
+HTML tags:
+
+<html>: Defines the root of an HTML document.
+<head>: Contains metadata about the HTML document.
+<title>: Specifies the title of the webpage, displayed in the browser's title bar or tab.
+<body>: Contains the visible content of the webpage.
+<h1> to <h6>: Heading tags, used to define different levels of headings (h1 being the highest).
+<p>: Defines a paragraph.
+<a>: Creates a hyperlink to another webpage or resource.
+<img>: Inserts an image into the webpage.
+<ul>: Defines an unordered list.
+<ol>: Defines an ordered (numbered) list.
+<li>: Represents a list item within an ordered or unordered list.
+<div>: Defines a division or a section in an HTML document.
+<span>: Defines an inline container for a small amount of HTML content.
+<table>: Creates a table.
+<tr>: Defines a table row.
+<td>: Represents a table cell.
+<th>: Defines a header cell in a table.
+<form>: Creates an HTML form for user input.
+<input>: Defines an input control, such as a text field or checkbox, within a form.
+<button>: Creates a clickable button.
+
+* section tag: The <section> tag in HTML is used to define a standalone section or block of content within an HTML document. Its primary role is to group related content together and provide semantic meaning to that particular section
+
+* body is about all the things that are shown in an page
+
+*attributes:
+<img> and <input> examples had more than just the element type in their opening tag. These extra bits of space-separated name/value pairs (though sometimes including a value is optional) are called attributes.
+attr comes i=only in the opening tab
+eg:  <a href="http://www.google.com">Go to Google</a>
+
+define the behavior, linkages, and functionality of elements.
+eg: <img src="switch.svg" alt="light switch" ismap />
+src, alt and ismap is attr of image tag
+HTML is not case-sensitive, but some attribute values are.
+* metadata viewport:
+The other meta tag that should be considered essential is the viewport meta tag, which helps site responsiveness, enabling content to render well by default, no matter the viewport width. While the viewport meta tag has been around since June 2007, when the first iPhone came out, it's only recently been documented in a specification. As it enables controlling a viewport's size and scale, and prevents the site's content from being sized down to fit a 960px site onto a 320px screen, it is definitely recommended.
+
