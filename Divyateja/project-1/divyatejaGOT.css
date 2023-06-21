@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.c-center{
+    text-align: center;
+}
+
+.background-container{
+    background-image: url("https://wallpapers.com/images/hd/cool-hd-logo-in-game-of-thrones-qhdelrxg3d2ftb1a.jpg");
+    background-size: cover;
+    height: auto;
+    width: 100%;
+  
+
+}
+
+button {
+    color: white;
+    background-color: #2b2a2a;
+    width: 138px;
+    height: 36px;
+    border-width: 0px;
+    border-radius: 20px;
+} 
+
+.card{
+    background-color:#9d9e6c;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius:15px;
+}
