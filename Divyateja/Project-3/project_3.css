@@ -1,0 +1,57 @@
+.log_in_button{
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 18px;
+    height: 36px;
+    width: 200px;
+}
+
+.facebook_button{
+    font-weight: bold;
+    color: white;
+    background-color:blue;
+    
+    border-radius: 18px;
+    height: 36px;
+    width: 200px;
+}
+
+.google_button{
+    font-weight: bold;
+    color: black;
+    background-color:white;
+    
+    border-radius: 18px;
+    height: 36px;
+    width: 200px;
+} 
+
+.github_button{
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    
+    border-radius: 18px;
+    height: 36px;
+    width: 200px;
+}
+
+.background_card{
+    text-align: center;
+    padding: 20px;
+    background-color: #edf2f2;
+    
+
+}
+
+.button_card{
+    padding:7px;
+}
+
+.card {
+    border: 3px solid #000; /* Set the border width and color */
+    padding: 10px; /* Optional: Add padding to create some space between the border and the content */
+  }
+  
