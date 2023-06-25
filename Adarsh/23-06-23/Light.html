@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Manupulation</title>
+    <link rel="stylesheet" href="light.css">
+</head>
+<body id="background">
+    <div class="box">
+    <h1 id="status">Light is OFF</h1>
+    <section class="box1"> <p id="text">Turn on the light to see thing</p> </section>
+    <div class="buton"><p><button id="on" type="button" onclick="switchon()" style="background-color: aliceblue;">Light On</button>
+        <button type="button" id="off" onclick="switchoff()" style="background-color: red;">Light Off</button></p>
+    </div>
+    </div>
+    <img id="lightpic" height="70" width="50" src="https://th.bing.com/th/id/R.5fa67a6f2c440cf49f30ca74b2080cdc?rik=02Dqrk6hf30W9Q&riu=http%3a%2f%2fpuzzles.nigelcoldwell.co.uk%2fimages%2flight-bulboff.png&ehk=F8JoqA3lOwiOQC1gEnh9ET2JIQyaLujRsH4UkxFwKOo%3d&risl=&pid=ImgRaw&r=0" > 
+    
+    <script>
+        function switchon(){
+            lighton();
+            para();
+            status();
+            background();
+            onColor();
+        }
+        function switchoff(){
+            lightoff();
+            paraoff();
+            statusoff();
+            backgroundoff();
+            offColor();
+        }
+        function lightoff(){
+            document.getElementById("lightpic").src= "https://th.bing.com/th/id/R.5fa67a6f2c440cf49f30ca74b2080cdc?rik=02Dqrk6hf30W9Q&riu=http%3a%2f%2fpuzzles.nigelcoldwell.co.uk%2fimages%2flight-bulboff.png&ehk=F8JoqA3lOwiOQC1gEnh9ET2JIQyaLujRsH4UkxFwKOo%3d&risl=&pid=ImgRaw&r=0";
+            document.getElementById("lightpic").width="50";
+            document.getElementById("lightpic").height="70";
+        }
+        function lighton(){
+        document.getElementById("lightpic").src= "https://dogemuchwow.com/wp-content/themes/dogeland/app/dogetizer/images/light-bulb.png";
+        document.getElementById("lightpic").width="40";
+        }
+        function para(){
+            document.getElementById("text").innerHTML="Now you can see things";
+        }
+        function status(){
+            document.getElementById("status").innerHTML="Light is ON";
+        }
+        function paraoff(){
+            document.getElementById("text").innerHTML="Turn on the light to see thing";
+        }
+        function statusoff(){
+            document.getElementById("status").innerHTML="Light is OFF";
+        }
+        function background() {
+            document.getElementById("background").background="https://images8.alphacoders.com/549/thumb-1920-549442.jpg";
+        }
+        function backgroundoff() {
+            document.getElementById("background").background="black";
+        }
+        function onColor() {
+            document.getElementById("on").style="background-color:red";
+            document.getElementById("off").style="background-color:aliceblue";
+        }
+        function offColor() {
+            document.getElementById("on").style="background-color:aliceblue";
+            document.getElementById("off").style="background-color:red";
+        }
+        
+    </script>
+</body>
+</html>

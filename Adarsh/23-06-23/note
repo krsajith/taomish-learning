@@ -1,0 +1,122 @@
+
+1) HTML class Attribute
+    The HTML class attribute is used to specify a class for an HTML element.
+    Multiple HTML elements can share the same class.
+    The class attribute is often used to point to a class name in a style sheet. 
+    It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+
+2) HTML id Attribute
+    The id attribute specifies a unique id for an HTML element. 
+    The value of the id attribute must be unique within the HTML document.
+    The syntax for id is: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}.
+
+3) HTML Iframes
+    An HTML iframe is used to display a web page within a web page.
+    The HTML <iframe> tag specifies an inline frame.
+    An inline frame is used to embed another document within the current HTML document.
+    syntax: <iframe src="url" title="description"></iframe>
+    
+    example:
+                <!DOCTYPE html>
+                <html>
+                <body>
+                
+                <h2>Iframe - Target for a Link</h2>
+                
+                <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+                
+                <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+                
+                <p>When the target attribute of a link matches the name of an iframe, the link will open in the iframe.</p>
+                
+                </body>
+                </html>
+
+4) HTML JavaScript
+    JavaScript makes HTML pages more dynamic and interactive.
+        
+        The HTML <script> tag is used to define a client-side script (JavaScript).
+        The <script> element either contains script statements, or it points to an external script file through the src attribute.
+        Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
+        To select an HTML element, JavaScript most often uses the document.getElementById() method.
+
+    4.1) JavaScript can change content:
+            
+            example:
+                        <!DOCTYPE html>
+                        <html>
+                        <body>
+
+                        <h1>My First JavaScript</h1>
+
+                        <p>JavaScript can change the content of an HTML element:</p>
+
+                        <button type="button" onclick="myFunction()">Click Me!</button>
+
+                        <p id="demo">This is a demonstration.</p>
+
+                        <script>
+                        function myFunction() { 
+                        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                        }
+                        </script>
+
+                        </body>
+                        </html>
+    
+    4.2)  JavaScript can change styles:
+
+            example:
+                        <!DOCTYPE html>
+                        <html>
+                        <body>
+
+                        <h1>My First JavaScript</h1>
+
+                        <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+                        <script>
+                        function myFunction() {
+                        document.getElementById("demo").style.fontSize = "25px"; 
+                        document.getElementById("demo").style.color = "red";
+                        document.getElementById("demo").style.backgroundColor = "yellow";        
+                        }
+                        </script>
+
+                        <button type="button" onclick="myFunction()">Click Me!</button>
+
+                        </body>
+                        </html>
+
+    4.3) JavaScript can change attributes:
+
+            example:
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Document</title>
+                        </head>
+                        <body>
+                            <h1>MY First JavaScript</h1>
+                            <p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+                            <img id="lightpic" src="pic_bulboff.giff" height="180" width="100">
+                            <p><button type="button" onclick="light(1)">Light On</button>
+                            <button type="button" onclick="light(0)">Light Off</button></p>
+                            <script>
+                            function light(sw){
+                                var pic;
+                                if(sw==0){
+                                pic="pic_bulboff.gif"
+                                }
+                                else{
+                                    pic="pic_bulon.gif"
+                                }
+                            
+                            document.getElementById(lightpic).src=pic;
+                            }
+                            </script>
+                        </body>
+                        </html>
+
