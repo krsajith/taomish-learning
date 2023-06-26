@@ -1,0 +1,3 @@
+added color, on div, whole word, sentence
+
+tried inserting videos and images using html, learned about, nav, footer, header, aside
