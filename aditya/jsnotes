@@ -1,0 +1,186 @@
+Starting with the basics of Js, 
+
+how to connect it, what are the platform to use, how to setup with ive port connections and other things
+
+- how to work with js on console, eg using alert(1) to show alert and clear() to clear all
+
+edge >>> chrome
+
+- ******************Variables******************
+
+two types of variables used in js, **let & const(fixed)**
+
+```jsx
+// let, const
+
+let age = 30;
+age=31;
+
+console.log(age);
+```
+
+```jsx
+const score;
+score=31;
+
+console.log(score);
+```
+
+- ******************Datatypes******************:
+
+// string, numbers, boolean, null, undefined, symbol
+
+```jsx
+const nam = 'aditya';
+const age = 18;
+const rating = 7.2;
+const isCool = true;
+const x = null;
+const y = undefined;
+let z;
+
+console.log(typeof nam);
+```
+
+null is a bogus value
+
+Concatenation:
+
+```jsx
+//concat
+console.log('My name is ' + nam + ' and I am ' +age+ ' years old ');
+```
+
+```jsx
+//template string
+console.log(`My name is ${nam} and I am ${age}`); 
+```
+
+- ********************************************************String property and methods:********************************************************
+
+for lenght:
+
+```jsx
+const nam = 'achiken biryani';
+console.log(nam.length);
+```
+
+length is property, method is function associated with objects
+
+**console.log(nam.toUpperCase());**
+
+**console.log(nam.substring(0,5));**
+
+we can tag more methods into it: like (**console.log(nam.substring(0,5).toUpperCase());**)
+
+split:
+
+console.log(nam.split(''));
+
+**************************************Creation of array from list of string************************************** 
+
+use of ,space (, )
+
+```jsx
+**const nam = 'achiken, biryani, shareef, donne, zaza';
+console.log(nam.split(', '));**
+```
+
+arrays that hold multiple values;
+
+how to add something to existing array: 
+
+```jsx
+const nam = ['apple', 'oramge', 3, true];
+nam.push('mangos');
+console.log(nam);
+```
+
+nam.unshift('straw'); (used for adding at front)
+
+nam.pop(); (to eliminate from end)
+
+console.log(Array.isArray(nam));  (to check whether it’s in or not)
+
+console.log(nam.indexOf(3));  (to check index value)
+
+********************************Object literals:********************************
+
+
+
+**************************************For Loop iteration:**************************************
+
+```jsx
+**for(let i = 0; i </<= 10; i++) {
+    console.log(i);
+}**
+```
+
+```jsx
+for(let i = 0; i < 10; i++) {
+    console.log('For loop number: ${i}');
+}
+
+//while
+let i = 0;
+while(i<10){
+    console.log(`while loop number: ${i}`);
+    i++;
+}
+```
+
+```jsx
+for(let i = 0; i < todos.length; i++) {
+    console.log(todos[i].text);
+}
+better way is:
+for( let todo of todos){
+    console.log(todo.id);
+}
+
+high order array methods which is the bestest way to do iteration with arrays:
+```
+
+high order array methods which is the bestest way to do iteration with arrays:
+
+for each: which just loops through them
+
+```jsx
+todos.forEach(function(todo){
+    console.log(todo.text);
+});
+```
+
+map: allow us to create new array from a array
+
+```jsx
+const todoText = todos.map(function(todo){
+    return todo.text;
+});
+
+console.log(todoText);
+```
+
+filter: which allow us to create new array with condition
+
+```jsx
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+});
+
+console.log(todoCompleted);
+```
+
+or more optimise: with chaining with map
+
+```jsx
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+}).map(function(todo){
+    return todo.text;
+})
+
+console.log(todoCompleted);
+```
+
+[conditionals](https://www.notion.so/conditionals-cf3ea506c70d4668aa46b29655bb6834?pvs=21)
