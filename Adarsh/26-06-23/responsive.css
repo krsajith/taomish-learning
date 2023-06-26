@@ -1,0 +1,32 @@
+
+
+body{
+    background-color: rgb(242, 243, 213);
+    margin: 0px;
+}
+
+.main{
+    background-color: rgb(86, 156, 35);
+    padding: 10px;
+}
+
+.london{
+    float: left;
+    width: 20%;
+    margin-left: 30px;
+}
+
+.paris{
+  float: left;
+  width: 20%;
+  margin-left: 30px;
+}
+.tokyo{
+    float: left;
+    width:20%;
+    margin-left: 30px;
+}
+@media only screen and (max-width: 620px) {
+     .main, .london, .paris, .tokyo {
+        width: 100%;
+    }

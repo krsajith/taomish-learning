@@ -1,0 +1,331 @@
+
+1) DOM (Document Object Model)
+    The Document Object Model, or DOM for short, represents all page content as objects that can be modified.
+    The document object is the main “entry point” to the page. We can change or create anything on the page using it.
+
+    1.1) DOM tree
+            The backbone of an HTML document is tags.
+            According to the Document Object Model (DOM), every HTML tag is an object. Nested tags are “children” of the enclosing one. The text inside a tag is an object as well.
+            All these objects are accessible using JavaScript, and we can use them to modify the page.
+    
+    1.2) Walking the DOM
+            The DOM allows us to do anything with elements and their contents, but first we need to reach the corresponding DOM object.
+            All operations on the DOM start with the document object. That’s the main “entry point” to DOM. From it we can access any node.
+                                       
+                              example:         
+                                        document
+                                        document.documentElement
+                                        <HTML>
+                                        document.body
+                                        (if inside body)
+                                        parentNode
+                                        <DIV>
+                                        nextSibling
+                                        previousSibling
+                                        childNodes
+                                        firstChild
+                                        lastChild
+
+2) HTML Responsive Web Design
+    Responsive web design is about creating web pages that look good on all devices!
+    A responsive web design will automatically adjust for different screen sizes and viewports.
+
+    2.1) Setting The Viewport
+            To create a responsive website, add the following <meta> tag to all your web pages.
+            syntax: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    2.2) Responsive Images
+            If the CSS width property is set to 100%, the image will be responsive and scale up and down.
+            The HTML <picture> element allows you to define different images for different browser window sizes.
+            
+            example:
+                        <picture>
+                        <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+                        <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+                        <source srcset="flowers.jpg">
+                        <img src="img_smallflower.jpg" alt="Flowers">
+                        </picture>
+    
+    2.3) Responsive Text Size
+            The text size can be set with a "vw" unit, which means the "viewport width".
+            That way the text size will follow the size of the browser window:
+    
+    2.4) Media Queries
+            In addition to resize text and images, it is also common to use media queries in responsive web pages.
+            With media queries you can define completely different styles for different browser sizes.
+
+                example 1: 
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <style>
+                            * {
+                            box-sizing: border-box;
+                            }
+
+                            .left {
+                            background-color: #2196F3;
+                            padding: 20px;
+                            float: left;
+                            width: 20%; /* The width is 20%, by default */
+                            }
+
+                            .main {
+                            background-color: #f1f1f1;
+                            padding: 20px;
+                            float: left;
+                            width: 60%; /* The width is 60%, by default */
+                            }
+
+                            .right {
+                            background-color: #04AA6D;
+                            padding: 20px;
+                            float: left;
+                            width: 20%; /* The width is 20%, by default */
+                            }
+
+                            /* Use a media query to add a break point at 800px: */
+                            @media screen and (max-width: 800px) {
+                            .left, .main, .right {
+                                width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+                            }
+                            }
+                            </style>
+                            </head>
+                            <body>
+
+                            <h2>Media Queries</h2>
+                            <p>Resize the browser window.</p>
+
+                            <p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+                            <div class="left">
+                            <p>Left Menu</p>
+                            </div>
+
+                            <div class="main">
+                            <p>Main Content</p>
+                            </div>
+
+                            <div class="right">
+                            <p>Right Content</p>
+                            </div>
+
+                            </body>
+                            </html>
+                
+                example 2:
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <style>
+                            * {
+                            box-sizing: border-box;
+                            }
+
+                            .menu {
+                            float: left;
+                            width: 20%;
+                            text-align: center;
+                            }
+
+                            .menu a {
+                            background-color: #e5e5e5;
+                            padding: 8px;
+                            margin-top: 7px;
+                            display: block;
+                            width: 100%;
+                            color: black;
+                            }
+
+                            .main {
+                            float: left;
+                            width: 60%;
+                            padding: 0 20px;
+                            }
+
+                            .right {
+                            background-color: #e5e5e5;
+                            float: left;
+                            width: 20%;
+                            padding: 15px;
+                            margin-top: 7px;
+                            text-align: center;
+                            }
+
+                            @media only screen and (max-width: 620px) {
+                            /* For mobile phones: */
+                            .menu, .main, .right {
+                                width: 100%;
+                            }
+                            }
+                            </style>
+                            </head>
+                            <body style="font-family:Verdana;color:#aaaaaa;">
+
+                            <div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+                            <h1>Hello World</h1>
+                            </div>
+
+                            <div style="overflow:auto">
+                            <div class="menu">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                                <a href="#">Link 4</a>
+                            </div>
+
+                            <div class="main">
+                                <h2>Lorum Ipsum</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            </div>
+
+                            <div class="right">
+                                <h2>About</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            </div>
+                            </div>
+
+                            <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+
+                            </body>
+                            </html>
+
+3) HTML Semantic Elements
+        A semantic element clearly describes its meaning to both the browser and the developer.
+        Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+        Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+                <article>
+                <aside>
+                <details>
+                <figcaption>
+                <figure>
+                <footer>
+                <header>
+                <main>
+                <mark>
+                <nav>
+                <section>
+                <summary>
+                <time>
+
+        3.1) HTML <section> Element
+                The <section> element defines a section in a document.
+                example:
+                            <section>
+                            <h1>WWF</h1>
+                            <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+                            </section>
+
+                            <section>
+                            <h1>WWF's Panda symbol</h1>
+                            <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+                            </section>
+
+        3.2) HTML <article> Element
+                The <article> element specifies independent, self-contained content.
+                An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+                example:
+                                <article>
+                                <h2>Google Chrome</h2>
+                                <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+                                </article>
+
+                                <article>
+                                <h2>Mozilla Firefox</h2>
+                                <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+                                </article>
+
+                                <article>
+                                <h2>Microsoft Edge</h2>
+                                <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+                                </article>
+
+        3.3) HTML <header> Element
+                    The <header> element represents a container for introductory content or a set of navigational links.
+                    A <header> element typically contains.
+                            .one or more heading elements (<h1> - <h6>)
+                            .ogo or icon
+                            .authorship information
+
+        3.4) HTML <footer> Element
+                The <footer> element defines a footer for a document or section.
+                A <footer> element typically contains:
+                        .authorship information
+                        .copyright information
+                        .contact information
+                        .sitemap
+                        .back to top links
+                        .related documents
+
+        3.5) HTML <nav> Element
+                The <nav> element defines a set of navigation links.
+
+                example:
+                        <nav>
+                        <a href="/html/">HTML</a> |
+                        <a href="/css/">CSS</a> |
+                        <a href="/js/">JavaScript</a> |
+                        <a href="/jquery/">jQuery</a>
+                        </nav>
+
+        3.6) HTML <aside> Element
+                The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+                The <aside> content should be indirectly related to the surrounding content.
+
+                example: 
+                        <html>
+                        <head>
+                        <style>
+                        aside {
+                        width: 30%;
+                        padding-left: 15px;
+                        margin-left: 15px;
+                        float: right;
+                        font-style: italic;
+                        background-color: lightgray;
+                        }
+                        </style>
+                        </head>
+                        <body>
+
+                        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+                        <aside>
+                        <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                        </aside>
+
+                        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+                        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+                        </body>
+                        </html>
+        
+        3.7) HTML <figure> and <figcaption> Elements
+                The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+                The <figcaption> tag defines a caption for a <figure> element. The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+
+                example:
+                            <figure>
+                            <img src="pic_trulli.jpg" alt="Trulli">
+                            <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+                            </figure>
+
+4) HTML Entities
+    Reserved characters in HTML must be replaced with character entities.
+
+                                        non-breaking space	                &nbsp;		
+                                    <	less than	                        &lt;		
+                                    >	greater than	                        &gt;
+                                    &	ampersand	                        &amp;	
+                                    "	double quotation mark	                &quot;	
+                                    '	single quotation mark (apostrophe)	&apos;	
+                                    ¢	cent	                                &cent;	
+                                    £	pound	                                &pound;	
+                                    ¥	yen	                                &yen;		
+                                    €	euro	                                &euro;	
+                                    ©	copyright	                        &copy;		
+                                    ®	registered trademark	                &reg;
