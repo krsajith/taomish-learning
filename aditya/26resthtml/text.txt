@@ -1,0 +1,124 @@
+HTML Anatomy
+HTML is composed of elements. These elements structure the webpage and define its content.
+
+A tag and the content between it is called an HTML element. There are many tags that we can use to organize and display text and other types of content, like images.
+
+HTML element (or simply, element) — a unit of content in an HTML document formed by HTML tags and the text or media it contains.
+
+HTML Tag — the element name, surrounded by an opening (<) and closing (>) angle bracket.
+
+Opening Tag — the first HTML tag used to start an HTML element. The tag type is surrounded by opening and closing angle brackets.
+
+Content — The information (text or other elements) contained between the opening and closing tags of an HTML element.
+
+Closing tag — the second HTML tag used to end an HTML element. Closing tags have a forward slash (/) inside of them, directly after the left angle bracket.
+
+
+more about tree structure like body is parent, h1 and h2 grandchildren
+
+
+*Styling Text
+You can also style text using HTML tags. The <em> tag emphasizes text, while the <strong> tag highlights important text.
+
+Later, when you begin to style websites, you will decide how you want browsers to display content within <em> and <strong> tags. Browsers, however, have built-in style sheets that will generally style these tags in the following ways:
+
+The <em> tag will generally render as italic emphasis.
+The <strong> will generally render as bold emphasis.
+
+
+*Ordered Lists
+Ordered lists (<ol>) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last.
+
+You can create the ordered list with the <ol> tag and then add individual list items to the list using <li> tags.
+
+*Whitespace
+The rest of this lesson will focus on some tools developers use to make code easier to interpret.
+
+As the code in an HTML file grows, it becomes increasingly difficult to keep track of how elements are related. Programmers use two tools to visualize the relationship between elements: whitespace and indentation.
+
+Both tools take advantage of the fact that the position of elements in a browser is independent of the amount of whitespace or indentation in the index.html file.
+
+For example, if you wanted to increase the space between two paragraphs on your web page, you would not be able to accomplish this by adding space between the paragraph elements in the index.html file. The browser ignores whitespace in HTML files when it renders a web page, so it can be used as a tool to make code easier to read and follow.
+
+What makes the example below difficult to read?
+
+<body><p>Paragraph 1</p><p>Paragraph 2</p></body>
+You have to read the entire line to know what elements are present. Compare the example above to this:
+
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+</body>
+
+*Table Headings
+Table data doesn’t make much sense without titles to describe what the data represents.
+
+To add titles to rows and columns, you can use the table heading element: <th>.
+
+The table heading element is used just like a table data element, except with a relevant title. Just like table data, a table heading must be placed within a table row.
+
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+What happened in the code above?
+
+First, a new row was added to hold the three headings: a blank heading, a Saturday heading, and a Sunday heading. The blank heading creates the extra table cell necessary to align the table headings correctly over the data they correspond to.
+
+In the second row, one table heading was added as a row title: Temperature.
+
+When rendered, this code will appear similar to the image below:Table Example
+
+Note, also, the use of the scope attribute, which can take one of two values:
+
+row - this value makes it clear that the heading is for a row.
+col - this value makes it clear that the heading is for a column.
+
+* Spanning Columns
+What if the table contains data that spans multiple columns?
+
+For example, a personal calendar could have events that span across multiple hours, or even multiple days.
+
+Data can span columns using the colspan attribute. The attribute accepts an integer (greater than or equal to 1) to denote the number of columns it spans across.
+
+
+*
+<table>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+  <tr>
+    <td>Cell 4</td>
+    <td>Cell 5</td>
+    <td>Cell 6</td>
+  </tr>
+</table>
+
+2 row and each contain  3 colum datas
+
+* Introduction to HTML Forms
+*<form action="/example.html" method="POST">
+  <input type="text" name="first-text-field" value="already pre-filled">
+</form>
+
+value jo hoga voh filled hoga box mein
+
+
+*
+Number Input
+<form>
+  <label for="years"> Years of experience: </label>
+  <input id="years" name="years" type="number" step="1">
+</form>
+By setting type="number" for an <input> we can restrict what users type into the input field to just numbers (and a few special characters like -, +, and .)
+
