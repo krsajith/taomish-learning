@@ -1,0 +1,21 @@
+.background-container{
+    background-color: beige;
+    margin: 3%;
+
+}
+
+.card{
+    background-color: white;
+    width: 700px;
+    height: auto;
+    margin-left: 25%;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 20px 20px 20px #666866;
+
+}
+.caption{
+    font-size: 25px;
+    text-align: center;
+
+}
