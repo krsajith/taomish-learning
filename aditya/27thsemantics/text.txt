@@ -1,0 +1,56 @@
+*semantic
+Why use Semantic HTML?
+
+Accessibility: Semantic HTML makes webpages accessible for mobile devices and for people with disabilities as well. This is because screen readers and browsers are able to interpret the code better.
+
+SEO: It improves the website SEO, or Search Engine Optimization, which is the process of increasing the number of people that visit your webpage. With better SEO, search engines are better able to identify the content of your website and weight the most important content appropriately.
+
+Easy to Understand: Semantic HTML also makes the website’s source code easier to read for other web developers.
+
+*header:
+A <header> is a container usually for either navigational links or introductory content containing <h1> to <h6> headings.
+
+*navigational
+A <nav> is used to define a block of navigation links such as menus and tables of contents. It is important to note that <nav> can be used inside of the <header> element but can also be used on its own.
+<li><a href="#home">Home</a></li>
+
+*Main and Footer
+Two more structural elements are <main> and <footer>. These elements along with <nav> and <header> help describe where an element is located based on conventional web development standards.
+The element <main> is used to encapsulate the dominant content within a webpage. This tag is separate from the <footer> and the <nav> of a web page since these elements don’t contain the principal content.
+
+*The content at the bottom of the subject information is known as the footer, indicated by the <footer> element. The footer contains information such as:
+
+*Article and Section
+sections;<section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. For example, content with the same theme such as articles about cricket can go under a single <section>. A website’s home page could be split into sections for the introduction, news items, and contact information
+
+articel:The <article> element holds content that makes sense on its own. <article> can hold content such as articles, blogs, comments, magazines, etc. An <article> tag would help someone using a screen reader understand where the article content (that might contain a combination of text, images, audio, etc.) begins and ends.
+ <section>
+        <article>
+        <h2>Facts About Dogs</h2>
+        <p>
+        Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+        </p>
+        </article>
+      </section>   
+
+
+*The Aside Element
+
+*Figure and Figcaption
+figure:<figure> is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.
+
+figmentation:<figcaption> is an element used to describe the media in the <figure> tag. Usually, <figcaption> will go inside <figure>. This is different than using a <p> element to describe the content; if we decide to change the location of <figure>, the paragraph tag may get displaced from the figure while a <figcaption> will move with the figure.
+
+
+*figur:
+<figure>
+        <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+        <figcaption>A cute dog.</figcaption>
+      </figure>  
+      <audio controls>
+        <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+      </audio> 
+  <!-- Create <video> and <embed> tag here -->
+      <video controls src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4"></video>
+      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+      
