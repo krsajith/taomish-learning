@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="formstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Forms</title>
+  </head>
+  <body>
+    <section id="overlay">
+      <img src="logo.png" alt="Taomish Logo" id="logo">
+      <hr>
+      <!--Add your code below-->
+      <form action = "practice.html" method="POST">
+        <h1>Welcome User</h1>
+        <p>Contact Us!! </p>
+
+        <label for="username">Username:</label>
+  			<input type="text" name="username" id="username">
+        <br>
+        <label for="user-pw">Password:</label>
+        <!--Add your code below-->
+        <input type="password" name="user-pw" id="user-pw">
+
+        <div>
+          <input type="range" name="doneness" id="doneness" min="0" max="5" step="0.5">
+        </div>
+
+        <div>
+          <label for="tomato">Tomato</label>
+          <!--Add your code below for the third checkbox-->
+          <input id = "tomato" name="topping" type="checkbox" value="tomato">
+
+
+        <label for="chicken">chicken</label>
+        <input id="chicken" name="topping" type="checkbox" value="chicken">
+        </div>
+
+        <section class="cheesy">
+          <span>Would you like to buy our new technology?</span>
+          <br>
+	        <!--Add your first radio button below-->
+          <input type="radio" id="yes" name="cheese" value="yes">
+
+
+          <label for="yes">Yes</label>
+	        <!--Add your second radio button below-->
+          <input type="radio" id="no" name="cheese" value="no">
+
+
+          <label for="no">No</label>
+        </section>
+
+        <section class="service-type">
+					<label for="service">What type of service would you like?</label>
+          <!--Add your code below-->
+					<select id="service" name="service">
+            <option value="ctrm">CTRM</option>
+            <option value="ois">OIS</option>
+            <option value="treasury">TREASURY</option>
+          
+        </section>
+        <div>
+        <section class="price-selection">
+					<label for="price">What type of sauce would you like?</label>
+          <input type="text" list="prices" id="price" name="price">
+          <!--Add your code below-->
+					<datalist id="prices">
+            <option value="40K">40K USD</option>
+            <option value="50K">50K USD</option>
+            <option value="60K">60K USD</option>
+          </datalist>
+          
+        </section>
+      </div>
+
+        <div>
+          <section class="extra-info">
+            <label for="extra">Anything else you want to add?</label>
+            <br>
+            <!--Add your code below-->
+            <textarea id="extra" name="extra" rows="3" cols="40">Write your review</textarea>
+            
+            
+          </section>
+        </div>
+        <section class="submission">
+          <!--Add your code below-->
+          <input type="submit" value="Submit">
+          
+        </section>
+        </form>
+      
+        
+      
+    </section>
+
+    
+
+  </body>
+</html>
