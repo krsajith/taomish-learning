@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link rel="stylesheet" href="project-9.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Login page">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Divyateja">
+        <title> Login Page</title>
+        <style>
+         .button {
+           background-color: rgb(17, 17, 18);
+           height: 38px;
+           width: 410px;
+           color: white;
+           margin-top: 25px;
+         }
+         
+         .button:hover {
+           background-color: rgb(79, 83, 86);
+         }
+       </style>
+    </head>
+     <body>
+        <div style="text-align: center;">
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEX///8AAACWlpZhYWG0tLTCwsKenp7u7u6NjY3m5ua/v7+wsLDZ2dmZmZn09PSUlJRaWlot/mKCAAABCElEQVR4nO3c2Q3CUAxFQXYCYeu/WlowMeY5aKaAK5/fPCmbDQAAAAAAAAAAAABAyOV6jLpeRh+7yLyNm0cfu8jhg8LD6GMXUaiwP4UK+1OosD+FCvtTqLA/hQr7U6iwP4UK+1OosD+F6y/8/9e12/0Udb+NPhYAAABgnabI16Vp5GDWLnLQbuRglkKF9YNZChXWD2YpVFg/mKVQYf1glkKF9YNZChXWD2YpVFg/mKVQYf1glkKF9YNZChXWD2aFDpoe56hH6P2wXeHXKVSoUKFChQoVKlSoUKFChQoVKlSoUKFChQoVKlS4xsLnkMLnDwvn1/73Xuv8IRgAAAAAAAAAAAAAAEA3b8FeJRD+USvlAAAAAElFTkSuQmCC" alt="Error loading in unplash image" style="height:150px; width: 150px;">
+         <h1 style="font-size: 30px; margin-top:5px;"> Login </h1>
+         <p> Welcome back </p>
+         <button  onclick = "openWebsite()" style="background-color: rgb(50, 50, 238); height: 38px; width: 400px; color: white; "> Login With Facebook</button> <br> <br>
+
+         <p> or </p>
+
+         <form action="">
+            <label for="Email" style="display: flex; justify-content: left; margin-left: 542px;">Email </label>
+            <input type="text" style="height: 35px; width: 400px; margin-top: 8px;"> <br><br>
+            <label for="Password" style=" margin-top: 8px;margin-left:-350px;">Password</label><br>
+            <input type="password" style="height: 35px; width: 400px; margin-top: 8px;">
+         </form>
+
+         <button class="button" onclick="document.location='https://unsplash.com/s/photos/splash'"> Login </button> <br> <br>
+         <p style="border:solid black; width: 370px; height: 30px; margin-left:540px; padding: 20px;"> Don't have an account? <a href="https://unsplash.com/join"> Sign up </a></p>
+        
+        
+        </div> 
+     </body>
+
+     <script>
+       function openWebsite() {
+         window.open("www.facebook.com");
+      }
+     </script>
+</html>
