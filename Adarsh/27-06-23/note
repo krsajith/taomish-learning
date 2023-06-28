@@ -1,0 +1,96 @@
+
+1) HTML Forms
+        The HTML <form> element identifies a document landmark containing interactive controls for submitting information. Nested in a <form> you'll find all the interactive (and non-interactive) form controls that make up that form.
+        HTML is powerful. This section focuses on the power of HTML, covering what HTML can do without adding JavaScript. Using form data client-side to update the UI in some way generally involves CSS or JavaScript, which is not discussed here. 
+        There is an entire Learn Forms course. We won't duplicate that section here, but we will introduce several form controls and the HTML attributes that empower them.
+
+        1.1) Submitting forms
+                    Forms are submitted when the user activates a submit button nested within the form. When using <input> for buttons, the 'value' is the button's label, and is displayed in the button. When using <button>, 
+                    the label is the text between the opening and closing <button> tags. A submit button can be written either of two ways:
+                    syntax:
+                    <input type="submit" value="Submit Form">
+                    <button type="submit">Submit Form</button>
+
+                            The <form> element's action and method attribute values define the URL that processes the form data and the HTTP method used to submit the data, respectively.
+                            By default, the form data gets sent to the current page. Otherwise, set the action attribute to the URL of where the data should be sent.
+                            The method attribute defines the HTTP protocol of the request: generally GET or POST. With GET, the form data is sent as a parameter string of name=value pairs, appended to the action's URL.
+                            With POST, the data is appended to the body of the HTTP request. When sending secure data, such as passwords and credit card information, always use POST.
+
+                            The name is the value of the name attribute. The values come from the contents of the value attribute or the value entered or picked by the user.
+                            The value of a <textarea> is its inner text. The value of a <select> is the selected <option>'s value or, if the <option> doesn't include a value attribute, the value is the selected option's inner text.
+        
+        1.2) Radio buttons 
+                    If you have ever noticed that when you select a radio button within a group of radio buttons, only one can be selected at a time, this is due to the name attribute.
+                    This only-one-can-be-selected effect is created by giving each radio button in a group the same name.
+       
+        1.3) Checkboxes 
+                    It's valid for all checkboxes within a group to have the same name. Only selected checkboxes have their name and value submitted with the form. 
+                    If you have multiple checkboxes with the same name selected, the same name will be submitted with (hopefully) different values.
+
+        1.4) Labels and fieldsets 
+                    In order for users to know how to fill out a form, the form has to be accessible. Every form control must have a label. 
+                    You also want to label groups of form controls. While individual input, select, and text areas are labeled with <label>, 
+                    groups of form controls are labeled by the contents of the <legend> of the <fieldset> that groups them.
+
+                    For groups of radio buttons and checkboxes, the label provides the accessible name for the form control it is associated with, 
+                    but the group of controls and their labels also need a label. To label the group, group all of the elements into a <fieldset>, with the <legend> providing the label for the group.
+
+2) <audio> and <video> 
+        The <video> and <audio> elements can be used to embed media players directly with the src attribute or can be used as the container element for a series of <source> elements, 
+        each providing a src file suggestion. While <video> can be used to embed an audio file, the <audio> element is preferable for embedding sound files.
+
+        The opening <video> and <audio> tags can contain several other attributes including controls, autoplay, loop, mute, preload, and the global attributes. 
+        The <video> element also supports the height, width, and poster attributes.
+
+        The opening <video> and <audio> tags can contain several other attributes including controls, autoplay, loop, mute, preload, and the global attributes. 
+        The <video> element also supports the height, width, and poster attributes.
+
+        This <video> example has a single source with the src attribute linking to the video source. The poster attribute provides an image to display as the video loads. 
+        Finally, the controls attribute provides user video controls.
+
+        example: 
+                    <video src="videos/machines.webm" poster="images/machine.jpg" controls>
+                    <p>Watch <a href="https://youtube.com/link">video on Youtube</a>
+                    </video>
+
+ Cascading Style Sheets (CSS)
+
+3) Box Model
+        Everything displayed by CSS is a box. Understanding how the CSS Box Model works is therefore a core foundation of CSS.
+
+        3.1) Debugging the box model 
+                        Browser DevTools provide a visualisation of a selected box's box model calculations,
+                         which can help you understand how the box model works and importantly, how it is affecting the website you're working on.
+        
+        3.2) Controlling the box model 
+                Every browser applies a user agent stylesheet to HTML documents. The CSS used varies between each browser, but they provide sensible defaults to make content easier to read. 
+                They define how elements should look and behave if there's no CSS defined. It is in the user agent styles where a box's default display is set, too.
+                For example, if we are in a normal flow, a <div> element's default display value is block, a <li> has a default display value of list-item, and a <span> has a default display value of inline.
+                
+                An inline element has block margin, but other elements won't respect it. Use inline-block, and those elements will respect the block margin, while the element maintains most of the same behaviors it had as an inline element.
+                A block item will, by default, fill the available inline space, whereas a inline and inline-block elements will only be as large as their content.
+
+                Alongside an understanding of how user agent styles affect each box, you also need to understand box-sizing, which tells our box how to calculate its box size. 
+                By default, all elements have the following user agent style: box-sizing: content-box;.
+
+                Having content-box as the value of box-sizing means that when you set dimensions, such as a width and height, they will be applied to the content box. 
+                If you then set padding and border, these values will be added to the content box's size.
+
+4) Selectors
+        To apply CSS to an element you need to select it. 
+        CSS provides you with a number of different ways to do this, and you can explore them in this module.
+
+        4.1) Simple selectors 
+                The most straightforward group of selectors target HTML elements plus classes, IDs, and other attributes which may be added to an HTML tag.
+
+        4.2) Universal selector 
+                A universal selector—also known as a wildcard—matches any element.
+
+                example: 
+                * {
+                        color: hotpink;
+                      }
+
+                This rule causes every HTML element on the page to have hotpink text.
+
+      
