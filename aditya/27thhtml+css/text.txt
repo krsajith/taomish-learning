@@ -1,0 +1,239 @@
+HTML Anatomy
+HTML is composed of elements. These elements structure the webpage and define its content.
+
+A tag and the content between it is called an HTML element. There are many tags that we can use to organize and display text and other types of content, like images.
+
+HTML element (or simply, element) — a unit of content in an HTML document formed by HTML tags and the text or media it contains.
+
+HTML Tag — the element name, surrounded by an opening (<) and closing (>) angle bracket.
+
+Opening Tag — the first HTML tag used to start an HTML element. The tag type is surrounded by opening and closing angle brackets.
+
+Content — The information (text or other elements) contained between the opening and closing tags of an HTML element.
+
+Closing tag — the second HTML tag used to end an HTML element. Closing tags have a forward slash (/) inside of them, directly after the left angle bracket.
+
+
+more about tree structure like body is parent, h1 and h2 grandchildren
+
+
+*Styling Text
+You can also style text using HTML tags. The <em> tag emphasizes text, while the <strong> tag highlights important text.
+
+Later, when you begin to style websites, you will decide how you want browsers to display content within <em> and <strong> tags. Browsers, however, have built-in style sheets that will generally style these tags in the following ways:
+
+The <em> tag will generally render as italic emphasis.
+The <strong> will generally render as bold emphasis.
+
+
+*Ordered Lists
+Ordered lists (<ol>) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last.
+
+You can create the ordered list with the <ol> tag and then add individual list items to the list using <li> tags.
+
+*Whitespace
+The rest of this lesson will focus on some tools developers use to make code easier to interpret.
+
+As the code in an HTML file grows, it becomes increasingly difficult to keep track of how elements are related. Programmers use two tools to visualize the relationship between elements: whitespace and indentation.
+
+Both tools take advantage of the fact that the position of elements in a browser is independent of the amount of whitespace or indentation in the index.html file.
+
+For example, if you wanted to increase the space between two paragraphs on your web page, you would not be able to accomplish this by adding space between the paragraph elements in the index.html file. The browser ignores whitespace in HTML files when it renders a web page, so it can be used as a tool to make code easier to read and follow.
+
+What makes the example below difficult to read?
+
+<body><p>Paragraph 1</p><p>Paragraph 2</p></body>
+You have to read the entire line to know what elements are present. Compare the example above to this:
+
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+</body>
+
+*Table Headings
+Table data doesn’t make much sense without titles to describe what the data represents.
+
+To add titles to rows and columns, you can use the table heading element: <th>.
+
+The table heading element is used just like a table data element, except with a relevant title. Just like table data, a table heading must be placed within a table row.
+
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+What happened in the code above?
+
+First, a new row was added to hold the three headings: a blank heading, a Saturday heading, and a Sunday heading. The blank heading creates the extra table cell necessary to align the table headings correctly over the data they correspond to.
+
+In the second row, one table heading was added as a row title: Temperature.
+
+When rendered, this code will appear similar to the image below:Table Example
+
+Note, also, the use of the scope attribute, which can take one of two values:
+
+row - this value makes it clear that the heading is for a row.
+col - this value makes it clear that the heading is for a column.
+
+* Spanning Columns
+What if the table contains data that spans multiple columns?
+
+For example, a personal calendar could have events that span across multiple hours, or even multiple days.
+
+Data can span columns using the colspan attribute. The attribute accepts an integer (greater than or equal to 1) to denote the number of columns it spans across.
+
+
+*
+<table>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+  <tr>
+    <td>Cell 4</td>
+    <td>Cell 5</td>
+    <td>Cell 6</td>
+  </tr>
+</table>
+
+2 row and each contain  3 colum datas
+
+* Introduction to HTML Forms
+*<form action="/example.html" method="POST">
+  <input type="text" name="first-text-field" value="already pre-filled">
+</form>
+
+value jo hoga voh filled hoga box mein
+
+
+*
+Number Input
+<form>
+  <label for="years"> Years of experience: </label>
+  <input id="years" name="years" type="number" step="1">
+</form>
+By setting type="number" for an <input> we can restrict what users type into the input field to just numbers (and a few special characters like -, +, and .)
+
+
+<label for="amount">How many services you want?</label>
+          <!--Add your code below-->
+        <input type="number" name="amount" id="amount" value="number of services"
+        step="1">
+
+*Checkbox Input
+<form>
+  <p>Choose your pizza toppings:</p>
+  <label for="cheese">Extra cheese</label>
+  <input id="cheese" name="topping" type="checkbox" value="cheese">
+  <br>
+  <label for="pepperoni">Pepperoni</label>
+  <input id="pepperoni" name="topping" type="checkbox" value="pepperoni">
+  <br>
+  <label for="anchovy">Anchovy</label>
+  <input id="anchovy" name="topping" type="checkbox" value="anchovy">
+</form>
+Which rend
+
+*radiobutton input
+<form>
+  <p>What is sum of 1 + 1?</p>
+  <input type="radio" id="two" name="answer" value="2">
+  <label for="two">2</label>
+  <br>
+  <input type="radio" id="eleven" name="answer" value="11">
+  <label for="eleven">11</label>
+</form>
+
+*Dropdown list
+An alternative solution is to use a dropdown list to allow our users to choose one option from an organized list. Here’s the code to create a dropdown menu:
+
+<form>
+  <label for="lunch">What's for lunch?</label>
+  <select id="lunch" name="lunch">
+    <option value="pizza">Pizza</option>
+    <option value="curry">Curry</option>
+    <option value="salad">Salad</option>
+    <option value="ramen">Ramen</option>
+    <option value="tacos">Tacos</option>
+  </select>
+</form>
+
+*Datalist Input
+The <datalist> is used with an <input type="text"> element. The <input> creates a text field that users can type into and filter options from the <datalist>.
+<form>
+  <label for="city">Ideal city to visit?</label>
+  <input type="text" list="cities" id="city" name="city">
+ 
+  <datalist id="cities">
+    <option value="New York City"></option>
+    <option value="Tokyo"></option>
+    <option value="Barcelona"></option>
+    <option value="Mexico City"></option>
+    <option value="Melbourne"></option>
+    <option value="Other"></option>  
+  </datalist>
+</form>
+
+*Textarea element
+An <input> element with type="text" creates a single row input field for users to type in information. However, there are cases where users need to write in more information, like a blog post. In such cases, instead of using an <input>, we could use <textarea>.
+
+The <textarea> element is used to create a bigger text field for users to write more text. We can add the attributes rows and cols to determine the amount of rows and columns for the <textarea>. Take a look:
+
+<form>
+  <label for="blog">New Blog Post: </label>
+  <br>
+  <textarea id="blog" name="blog" rows="5" cols="30">
+  </textarea>
+</form>
+
+*Submit Form
+Remember, the purpose of a form is to collect information that will be submitted. That’s the role of the submit button — users click on it when they are finished with filling out information in the <form> and they’re ready to send it off. Now that we’ve gone over how to create various input elements, let’s now go over how to create a submit button!
+
+To make a submit button in a <form>, we’re going to use the reliable <input> element and set the type to "submit". For instance:
+
+<form>
+  <input type="submit" value="Send">
+</form>
+
+
+*Requiring an Input
+Sometimes we have fields in our <form>s which are not optional, i.e. there must be information provided before we can submit it. To enforce this rule, we can add the required attribute to an <input> element.
+
+Take for example:
+
+<form action="/example.html" method="POST">
+  <label for="allergies">Do you have any dietary restrictions?</label>
+  <br>
+  <input id="allergies" name="allergies" type="text" required>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+*min max
+ <input id="guests" name="guests" type="number" min="1" max="4">
+
+ *Checking Text Length
+ To set a minimum number of characters for a text field, we add the minlength attribute and a value to set a minimum value. Similarly, to set the maximum number of characters for a text field, we use the maxlength attribute and set a maximum value. Let’s take a look at these attributes in code:
+
+<form action="/example.html" method="POST">
+  <label for="summary">Summarize your feelings in less than 250 characters</label>
+  <input id="summary" name="summary" type="text" minlength="5" maxlength="250" required>
+  <input type="submit" value="Submit">
+</form>
+
+<input id="username" name="username" type="text" minlength="3" maxlength="15" required>
+
+*Matching a Pattern
+<form action="/example.html" method="POST">
+  <label for="payment">Credit Card Number (no spaces):</label>
+  <br>
+  <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+  <input type="submit" value="Submit">
+</form>
