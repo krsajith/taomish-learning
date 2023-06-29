@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(245, 245, 235);
+}
+
+h1{
+    text-align: center;
+    color: rgb(13, 13, 47);
+}
+
+ul{
+    list-style-type: none;
+    background-color: rgb(197, 224, 226);
+    position: fixed;
+    padding: 0px;
+    height: 100%;
+    width: 10%;
+    overflow: auto;
+    }
+
+li a{
+    display: block;
+    background-color: rgb(130, 190, 236);
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover{
+    background-color: rgb(26, 29, 37);
+    color: aliceblue;
+
+}
+
+li a.active{
+    background-color: rgb(26, 29, 37);
+    color: aliceblue;
+}
+
+.main{
+
+    margin-left: 10%;
+    padding: 40px 20px;
+}
+
+.first::first-letter{
+                color:rgb(218, 11, 11);
+                font-size: 35px;
+}
+
+.main p::first-letter{
+    margin-left: 25%;
+}
+
+p{
+    margin-top: 25px;
+}

@@ -1,0 +1,165 @@
+
+
+1) Selectors
+        To apply CSS to an element you need to select it. 
+        CSS provides you with a number of different ways to do this, and you can explore them in this module.
+
+        4.1) Simple selectors 
+                The most straightforward group of selectors target HTML elements plus classes, IDs, and other attributes which may be added to an HTML tag.
+
+        4.1.1) Universal selector 
+                A universal selector—also known as a wildcard—matches any element.
+
+                example: 
+                
+                * {
+                        color: hotpink;
+                      }
+
+                This rule causes every HTML element on the page to have hotpink text.
+        
+        4.1.2) Type selector
+                A type selector matches a HTML element directly.
+
+                example:
+                
+                section {
+                padding: 2em;
+                }
+
+        4.1.3) Class selector
+                A HTML element can have one or more items defined in their class attribute. The class selector matches any element that has that class applied to it.
+
+                example: 
+
+                .my-class {
+                color: red;
+                }
+
+        4.1.4) ID selector
+                An HTML element with an id attribute should be the only element on a page with that ID value.Similarly to the class selector ., use a # character to instruct CSS to look for an element that matches the id that follows it.
+
+                example:
+
+                    #rad {
+                        border: 1px solid blue;
+                        }
+
+        4.1.5) Attribute selector 
+                You can look for elements that have a certain HTML attribute, or have a certain value for an HTML attribute, using the attribute selector. Instruct CSS to look for attributes by wrapping the selector with square brackets ([ ]).
+
+                example: 
+
+                    <div data-type="primary"></div>
+                    <div data-type="secondary"></div>
+                        
+                        
+                        [data-type='primary' s] {
+                        color: red;
+                        }
+                
+                Along with case operators, you have access to operators that match portions of strings inside attribute values.
+
+                example:
+
+                    /* A href that contains "example.com" */
+                    [href*='example.com'] {
+                    color: red;
+                    }
+
+                    /* A href that starts with https */
+                    [href^='https'] {
+                    color: green;
+                    }
+
+                    /* A href that ends with .com */
+                    [href$='.com'] {
+                    color: blue;
+                    }
+
+        4.1.6) Grouping selectors
+                A selector doesn't have to match only a single element. You can group multiple selectors by separating them with commas.
+
+                example:
+
+                        strong, em, .my-class,[lang] {
+                            color: red;
+                            }
+
+        4.2) Pseudo-classes and pseudo-elements 
+                CSS provides useful selector types that focus on specific platform state, like when an element is hovered, structures inside an element, or parts of an element.
+
+        4.2.1) Pseudo-classes 
+                HTML elements find themselves in various states, either because they are interacted with, or one of their child elements is in a certain state.
+
+                example:
+                         /* Our link is hovered */
+                        a:hover {
+                        outline: 1px dotted green;
+                        }
+
+                        /* Sets all even paragraphs to have a different background */
+                        p:nth-child(even) {
+                        background: floralwhite;
+                        }
+
+        4.2.2) Pseudo-element 
+                Pseudo-elements differ from pseudo-classes because instead of responding to the platform state, they act as if they are inserting a new element with CSS. Pseudo-elements are also syntactically different from pseudo-classes, because instead of using a single colon (:), we use a double colon (::).
+
+                example: 
+                        .my-element::before {
+                            content: 'Prefix - ';
+                            }
+
+                            ::before pseudo-element to insert content at the start of an element, or the ::after pseudo-element to insert content at the end of an element.
+
+                            Pseudo-elements aren't limited to inserting content, though. You can also use them to target specific parts of an element. For example, suppose you have a list. Use ::marker to style each bullet point (or number) in the list.
+
+                            example:
+                                        /* Your list will now either have red dots, or red numbers */
+                                        li::marker {
+                                        color: red;
+                                        }
+
+                            You can also use ::selection to style the content that has been highlighted by a user.
+
+                            example:
+                                        ::selection {
+                                            background: black;
+                                            color: white;
+                                            }
+
+        4.3) Complex selectors
+                You have already seen a vast array of selectors, but sometimes, you will need more fine-grained control with your CSS. This is where complex selectors step in to help.
+
+                It's worth remembering at this point that although the following selectors give us more power, we can only cascade downwards, selecting child elements. We are not able to target upwards and select a parent element. 
+
+        4.3.1) Combinators 
+                A combinator is what sits between two selectors. For example, if the selector was p > strong, the combinator is the > character. The selectors which use these combinators help you select items based on their position in the document.
+
+                Descendant combinator:
+                                        A descendant combinator allows us to target a child element. This uses a space ( ) to instruct the browser to look for child elements.
+
+                Next sibling combinator:
+                                         You can look for an element that immediately follows another element by using a + character in your selector.
+
+        4.3.2) Subsequent- sibling combinator 
+                A subsequent combinator is very similar to a next sibling selector. Instead of a + character however, use a ~ character. How this differs is that an element just has to follow another element with the same parent, rather than being the next element with the same parent.
+
+5) Specificity
+    
+
+        5.1) Universal selector 
+                A universal selector (*) has no specificity and gets 0 points. This means that any rule with 1 or more points will override it
+
+        5.2) Class, pseudo-class, or attribute selector 
+                A class, pseudo-class or attribute selector gets 10 points of specificity.
+
+        5.3) ID selector 
+                An ID selector gets 100 points of specificity, as long as you use an ID selector.
+
+        5.4) Inline style attribute 
+                CSS applied directly to the style attribute of the HTML element, gets a specificity score of 1,000 points. This means that in order to override it in CSS, you have to write an extremely specific selector.
+
+        5.5) !important rule 
+                !important at the end of a CSS value gets a specificity score of 10,000 points. This is the highest specificity that one individual item can get.
