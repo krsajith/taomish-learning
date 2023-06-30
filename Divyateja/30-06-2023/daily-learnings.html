@@ -1,0 +1,151 @@
+<!-- Creating a flexbox container-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: rgb(248, 251, 254);
+}
+
+.flex-container > div {
+  background-color: #fc0a0a;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.para{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.para_2{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid;
+    padding: 20px;
+    align-items: center;
+    justify-content: left;
+}
+
+.para_3{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    padding: 20px;
+    align-items: center; 
+}
+
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+.flex-container>div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+<p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+<br>
+<br>
+
+<div class="para_3">
+<p class="para"> Here this is my paragraph for the flex box design to apply and seeing how it is working</p>
+<br><br><hr>
+
+
+<p class="para_2"> Here this is my paragraph for the flex box design to apply and seeing how it is working</p>
+
+
+
+<br><br>
+
+<p class="para_3"> Here this is my paragraph for the flex box design to apply and seeing how it is working</p>
+</div>
+
+<br><br>
+<p>Use the order property to sort the flex items as you like:</p>
+<div class="flex-container">
+    <div style="order: 3">1</div>
+    <div style="order: 2">2</div>
+    <div style="order: 4">3</div> 
+    <div style="order: 1">4</div>
+  </div>
+
+<br><br>
+  <div class="flex-container">
+    <div style="flex-grow: 1">1</div>
+    <div style="flex-grow: 1">2</div>
+    <div style="flex-grow: 8">3</div>
+  </div>
+<br><br>
+
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div style="align-self: center">3</div>
+    <div>4</div>
+  </div>
+
+
+  <h1>Grid Elements</h1>
+
+<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+
+<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+</body>
+</html>
