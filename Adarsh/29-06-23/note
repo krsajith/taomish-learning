@@ -1,0 +1,157 @@
+
+1) Color
+        There are several different ways to specify color in CSS.  
+        Color is an important part of any website and in CSS there are many options for color types, functions and treatments.
+
+        1.1) Numeric colors 
+                It is very likely that your first exposure to colors in CSS is via numeric colors. We can work with numerical color values in a few different forms.
+
+                example:
+                        h1 {
+                            color: #b71540;
+                            }
+
+        1.2) RGB (Red, Green, Blue) 
+                RGB colors are defined with the rgb() color function, using either numbers or percentages as parameters. The numbers need to be within the 0-255 range and the percentages are between 0% and 100%‌. RGB works on the 0-255 scale, so 255 would be equivalent to 100%, and 0 to 0%.
+
+                example:
+                        h1 {
+                            color: rgb(183, 21, 64);
+                            }
+
+        1.3) HSL (Hue, Saturation, Lightness) 
+                HSL stands for hue, saturation and lightness. Hue describes the value on the color wheel, from 0 to 360 degrees, starting with red (being both 0 and 360). A hue of 180, or 50% would be in the blue range. It's the origin of the color that we see.
+
+                example:
+                        h1 {
+                            color: hsl(344, 79%, 40%);
+                            }
+
+2) Sizing Units
+
+        2.1) Numbers 
+                Numbers are used to define opacity, line-height and even for color channel values in rgb. Numbers are unitless integers (1, 2, 3, 100) and decimals (.1, .2, .3).
+
+                example:
+                        p {
+                            font-size: 24px;
+                            line-height: 1.5;
+                            }
+
+                            Numbers can also be used in the following places:
+
+                                    When setting values for filters: filter: sepia(0.5) applies a 50% sepia filter to the element.
+                                    When setting opacity: opacity: 0.5 applies a 50% opacity.
+                                    In color channels: rgb(50, 50, 50), where the values 0-255 are acceptable to set a color value. See color lesson.
+                                    To transform an element: transform: scale(1.2) scales the element by 120% of its initial size.
+
+        2.2) Percentages 
+                When using a percentage in CSS you need to know how the percentage is calculated. For example,width is calculated as a percentage of the available width in the parent element.
+
+                        example:
+                                    div p {
+                                            width: 50%; 
+                                            }
+        
+        2.3) Dimensions and lengths 
+                If you attach a unit to a number, it becomes a dimension. For example, 1rem is a dimension. In this context, the unit that is attached to a number is referred to in specifications as a dimension token. Lengths are dimensions that refer to distance and they can either be absolute or relative.
+
+                2.3.1) Absolute lengths 
+                    All absolute lengths resolve against the same base, making them predictable wherever they're used in your CSS. For example, if you use cm to size your element and then print, it should be accurate if you compared it to a ruler.
+
+                    example:
+                                div {
+                                    width: 10cm;
+                                    height: 5cm;
+                                    background: black;
+                                    }
+
+                                        cm	Centimeters	
+                                        mm	Millimeters	
+                                        Q	Quarter-millimeters	
+                                        in	Inches	
+                                        pc	Picas	
+                                        pt	Points	
+                                        px	Pixels	
+
+                2.3.2) Relative lengths 
+                                A relative length is calculated against a base value, much like a percentage. The difference between these and percentages is that you can contextually size elements. This means that CSS has units such as ch that use the text size as a basis, and vw which is based on the width of the viewport (your browser window). Relative lengths are particularly useful on the web due to its responsive nature.
+
+                                Font-size-relative units 
+                                        CSS provides helpful units that are relative to the size of elements of rendered typography, such as the size of the text itself (em units) or width of the typefaces characters (ch units).
+
+                                        unit	        relative to
+                                        em	        Relative to the font size, i.e. 1.5em will be 50% larger than the base
+                                                        computed font size of its parent. (Historically, the height of the capital letter "M").
+                                        ex	        Heuristic to determine whether to use the x-height, a letter "x", or
+                                                         `.5em` in the current computed font size of the element.
+                                        cap	        Height of the capital letters in the current computed font size of the element.
+                                        ch	        Average character advance of a narrow glyph in the element's font 
+                                                        (represented by the "0" glyph).
+                                        ic	        Average character advance of a full width glyph in the element's font, 
+                                                        as represented by the "水" (CJK water ideograph, U+6C34) glyph.
+                                        rem	        Font size of the root element (default is 16px).
+                                        lh	        Line height of the element.
+                                        rlh	        Line height of the root element.
+
+                2.3.3) Viewport-relative units 
+                                You can use the dimensions of the viewport (browser window) as a relative basis. These units portion up the available viewport space.
+
+                                        unit	        relative to
+                                        vw	        1% of viewport's width. People use this unit to do cool font tricks, 
+                                                        like resizing a header font based on the width of the page so as the user resizes, the font will also resize.
+                                        vh	        1% of viewport's height. You can use this to arrange items in a UI, 
+                                                        if you have a footer toolbar for example.
+                                        vi	        1% of viewport's size in the root element's inline axis. Axis refers to writing modes. 
+                                                        In horizontal writing modes like English, the inline axis is horizontal. In vertical writing modes like some Japanese typefaces, the inline axis runs top to bottom.
+                                        vb	        1% of viewport's size in the root element's block axis. For the block axis, 
+                                                        this would be the directionality of the language. LTR languages like English
+                                                        would have a vertical block axis, since English language readers parse the page from top to bottom. A vertical writing mode has a horizontal block axis.
+                                        vmin	        1% of the viewport's smaller dimension.
+                                        vmax	        1% of the viewport's larger dimension.
+
+                2.3.4) Angle units
+
+                        example:
+
+                                div {
+                                        width: 150px;
+                                        height: 150px;
+                                        transform: rotate(60deg);
+                                }
+
+3) Layout
+        Modern CSS has exceptionally powerful layout tooling. We have dedicated systems for layout and we're going to have a high-level look at what we have at our disposal, before digging into more detail of Flexbox and Grid in the next modules.
+
+        3.1) Understanding the display property 
+                The display property does two things. The first thing it does is determine if the box it is applied to acts as inline or block.
+
+                Inline elements behave like words in a sentence. They sit next to each other in the inline direction. Elements such as <span> and <strong>, which are typically used to style pieces of text within containing elements like a <p> (paragraph), are inline by default. They also preserve surrounding whitespace.
+
+        3.2) Flexbox and Grid 
+                There are two main layout mechanisms that create layout rules for multiple elements, flexbox and grid. They share similarities, but are designed to solve different layout problems.
+
+                example:
+                                .my-element {
+                                                display: flex;
+                                            }
+
+                Flexbox is a layout mechanism for one-dimensional layouts. Layout across a single axis, either horizontally or vertically. By default, flexbox will align the element's children next to each other, in the inline direction, and stretch them in the block direction, so they're all the same height.
+
+                Items will stay on the same axis and not wrap when they run out of space. Instead they will try to squash onto the same line as each other. This behaviour can be changed using the align-items, justify-content and flex-wrap properties.
+
+                Flexbox also converts the child elements to be flex items, which means you can write rules on how they behave inside a flex container. You can change alignment, order and justification on an individual item. You can also change how it shrinks or grows using the flex property.
+
+                The flex property is a shorthand for flex-grow, flex-shrink and flex-basis. You can expand the above example like this.
+
+        3.3) Grid
+                Grid is similar in a lot of ways to flexbox, but it is designed to control multi-axis layouts instead of single-axis layouts (vertical or horizontal space).
+
+                Grid enables you to write layout rules on an element that has display: grid, and introduces a few new primitives for layout styling, such as the repeat() and minmax() functions. One useful grid unit is the fr unit—which is a fraction of remaining space—you can build traditional 12 column grids, with a gap between each item, with 3 CSS properties.
+
+                example: 
+                        .my-element {
+                                        display: grid;
+                                        grid-template-columns: repeat(12, 1fr);
+                                        gap: 1rem;
+                                    }
