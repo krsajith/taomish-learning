@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="project-10.css">
+    </head>
+        <body>
+            <div class="background-container">
+                
+                <h1> Let's Play</h1> <br>
+                <p style="color: white; font-size: 25px;"> Here in this game you need to guess the number </p> <br>
+                <h4 style="color: white;"> Guess a number between 1 to 100</h4> <br>
+                <input id = "userInput" class="input"type="text" placeholder="Enter any number between 1-100.."> <br> <br>
+                <button onclick="checkGuess()"> Check </button> <br>
+                <p id = "gameResult" class="game-result"> </p>
+            </div>
+
+
+
+
+            <script>
+                let gameResult = document.getElementById("gameResult");
+                let userInput = document.getElementById("userInput");
+                let randomNumber = Math.ceil(Math.random() * 100);
+
+                function checkGuess() {
+                 let guessedNumber = parseInt(userInput.value);
+                 if (guessedNumber > randomNumber) {
+                        gameResult.textContent = "Too High! Try Again.";
+                        gameResult.style.backgroundColor = "#1e217c";
+                    }
+                else if (guessedNumber < randomNumber) {
+                        gameResult.textContent = "Too Low! Try Again.";
+                        gameResult.style.backgroundColor = "#1e217c";
+                    }
+                else if (guessedNumber === randomNumber) {
+                        gameResult.textContent = "Congratulations! You got it right.";
+                        gameResult.style.backgroundColor = "green";
+                    }
+                else {
+                        gameResult.textContent = "Please provide a valid input.";
+                        gameResult.style.backgroundColor = "#1e217c";
+                    }
+         }
+
+
+
+
+
+
+
+
+            </script>
+        </body>
+    
+</html>
