@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> My daily learnings </title>
+    <style>
+        div p {
+          background-color: rgb(36, 79, 251);
+        }
+
+        div > h6 {
+          background-color: rgb(36, 79, 251);
+        }
+       
+       
+       div + h5 {
+        background-color: rgb(36, 79, 251);
+      }
+
+
+      div ~ h4 {
+        background-color: rgb(36, 79, 251);
+      }
+      </style>
+     
+        
+        
+
+
+</head>
+<body> 
+    <h1> Combinators </h1>
+    <h2>Descendant Selector</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p> <br>
+
+<hr> 
+
+
+
+
+
+
+
+
+<h2>Child Selector</h2>
+
+<h6>The child selector (>) selects all elements that are the children of a specified element.</h6>
+
+<div>
+  <h6>Paragraph 1 in the div.</h6>
+  <h6>Paragraph 2 in the div.</h6>
+  <section>
+    <!-- not Child but Descendant -->
+    <h6>Paragraph 3 in the div (inside a section element).</h6>
+  </section>
+  <h6>Paragraph 4 in the div.</h6>
+</div>
+
+<h6>Paragraph 5. Not in a div.</h6>
+<h6>Paragraph 6. Not in a div.</h6>
+<hr>
+
+
+
+
+
+
+
+<h2>Adjacent Sibling Selector</h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+<div>
+  <h5>Paragraph 1 in the div.</h5>
+  <h5>Paragraph 2 in the div.</h5>
+</div>
+
+<h5>Paragraph 3. After a div.</h5>
+<h5>Paragraph 4. After a div.</h5>
+
+<div>
+  <h5>Paragraph 5 in the div.</h5>
+  <h5>Paragraph 6 in the div.</h5>
+</div>
+
+<h5>Paragraph 7. After a div.</h5>
+<h5>Paragraph 8. After a div.</h5>
+
+<hr>
+
+
+
+
+<h2>General Sibling Selector</h2>
+
+<h3>The general sibling selector (~) selects all elements that are next siblings of a specified element.</h3>
+
+<h4>Paragraph 1.</h4>
+
+<div>
+  <h4>Paragraph 2.</h4>
+</div>
+
+<h4>Paragraph 3.</h4>
+<code>Some code.</code>
+<h4>Paragraph 4.</h4>
+
+
+
+
+
+</body>
+</html>
+
