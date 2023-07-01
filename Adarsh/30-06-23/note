@@ -1,0 +1,124 @@
+
+1) Flow layout 
+        If not using grid or flexbox, your elements display in normal flow. There are a number of layout methods that you can use to adjust the behavior and position of items when in normal flow.
+
+        1.1) Inline block 
+                Remember how surrounding elements don't respect block margin and padding on an inline element? With inline-block you can cause that to happen.
+
+                example:
+                            p span {
+                                        display: inline-block;
+                                    }
+
+        1.2) Floats 
+                If you have an image that sits within a paragraph of text, wouldn't it be handy for that text to wrap around that image like you might see in a newspaper? You can do this with floats.
+
+                The float property instructs an element to "float" to the direction specified. The image in this example is instructed to float left, which then allows sibling elements to "wrap" around it. You can instruct an element to float left, right or inherit.
+
+                example: 
+                            img {
+                                    float: left;
+                                    margin-right: 1em;
+                                }
+
+        1.3) Multicolumn layout 
+                If you have a really long list of elements, such as a list of all of the countries of the world, it can result in a lot of scrolling and time wasted for a user. It can also create excess whitespace on the page. With CSS multicolumn, you can split this into multiple columns to help with both of these issues.
+
+                example: 
+                            <h1>All countries</h1>
+                            <ul class="countries">
+                            <li>Argentina</li>
+                            <li>Aland Islands</li>
+                            <li>Albania</li>
+                            <li>Algeria</li>
+                            <li>American Samoa</li>
+                            <li>Andorra</li>
+                            …
+                            </ul>
+
+                            .countries {
+                                            column-count: 2;
+                                            column-gap: 1em;
+                                        }
+
+                                        or
+
+                            .countries {
+                                            width: 100%;
+                                            column-width: 260px;
+                                            column-gap: 1em;
+                                        }
+
+        1.4) Positioning 
+                Last on this overview of layout mechanisms is positioning. The position property changes how an element behaves in the normal flow of the document, and how it relates to other elements. The available options are relative, absolute, fixed and sticky with the default value being static.
+
+
+                                    example:
+                                                .my-element {
+                                                position: relative;
+                                                top: 10px;
+                                                }
+
+        1.5) Wrap-up 
+                There's a lot of choice and flexibility with CSS layout. To dive further into the power of CSS Flexbox and Grid, continue into the next few modules.
+
+2) Flexbox
+        The Flexible Box Layout Model (flexbox) is a layout model designed for one-dimensional content. It excels at taking a bunch of items which have different sizes, and returning the best layout for those items.
+
+        What can you do with a flex layout? 
+
+                They can display as a row, or a column.
+                They respect the writing mode of the document.
+                They are single line by default, but can be asked to wrap onto multiple lines.
+                Items in the layout can be visually reordered, away from their order in the DOM.
+                Space can be distributed inside the items, so they become bigger and smaller according to the space available in their parent.
+                Space can be distributed around the items and flex lines in a wrapped layout, using the Box Alignment properties.
+                The items themselves can be aligned on the cross axis.
+
+                To use flexbox you need to declare that you want to use a flex formatting context and not regular block and inline layout. Do this by changing the value of the display property to flex.
+
+                example:
+                            .container {
+                                            display: flex;
+                                        }
+
+        2.1) Controlling the direction of items 
+                Even though you haven't added a flex-direction property yet, the items display as a row because the initial value of flex-direction is row. If you want a row then you don't need to add the property. To change the direction, add the property and one of the four values.
+
+                row: the items lay out as a row.
+                row-reverse: the items lay out as a row from the end of the flex container.
+                column: the items lay out as a column.
+                column-reverse : the items lay out as a column from the end of the flex container.
+
+        2.2) Wrapping flex items 
+                The initial value of the flex-wrap property is nowrap. This means that if there is not enough space in the container the items will overflow.
+
+                To cause the items to wrap add flex-wrap: wrap to the flex container.
+
+                        example:
+                                    .container {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                }
+
+        2.3) The flex-flow shorthand 
+                You can set the flex-direction and flex-wrap properties using the shorthand flex-flow. For example, to set flex-direction to column and allow items to wrap.
+
+        2.4) Controlling space inside flex items
+                flex-grow: 0: items do not grow.
+                flex-shrink: 1: items can shrink smaller than their flex-basis.
+                flex-basis: auto: items have a base size of auto.
+
+        2.5) Flexbox alignment overview 
+                Flexbox brought with it a set of properties for aligning items and distributing space between items. These properties were so useful they have since been moved into their own specification, you'll encounter them in Grid Layout too. Here you can find out how they work when you are using flexbox.
+
+        The set of properties can be placed into two groups. Properties for space distribution, and properties for alignment. The properties which distribute space are:
+
+            justify-content: space distribution on the main axis.
+            align-content: space distribution on the cross axis.
+            place-content: a shorthand for setting both of the above properties.
+            
+        The properties used for alignment in flexbox:
+
+            align-self: aligns a single item on the cross axis.
+            align-items: aligns all of the items as a group on the cross axis.
