@@ -1,0 +1,102 @@
+
+Java Script
+"""""""""""
+
+JavaScript is one of the 3 languages all web developers must learn:
+
+         HTML to define the content of web pages
+
+         CSS to specify the layout of web pages
+
+         JavaScript to program the behavior of web pages
+
+The <script> Tag
+In HTML, JavaScript code is inserted between <script> and </script> tags.
+
+
+1) Data Types
+
+    Primitive / Value Type & Refference Type
+    A const variable cannot be reassigned
+
+
+    1.1) Primitive Datatypes
+                 Number,String,Boolean,Undefine,Null
+
+                 examples:
+                            let name='Adarsh';          // String literals
+                            let age=27;                 //Number literals      
+                            let isapproved=false;       //Boolean literals
+                            let firstName=undefined;    //Undefine literals
+                            let selectColor=null;       //Null literals
+                            
+                BigInt:
+                            All JavaScript numbers are stored in a a 64-bit floating-point format.
+                            JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be represented 
+                            by a normal JavaScript Number.
+
+                example:
+                            let x = BigInt("123456789012345678901234567890");
+   
+                The typeof Operator
+                                You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+                                The typeof operator returns the type of a variable or an expression:
+                                
+                                Example
+                                typeof ""             // Returns "string"
+                                typeof "John"         // Returns "string"
+                                typeof "John Doe"     // Returns "string"
+    
+    1.2) Reference Type
+                Objects,Arrays,Functions
+
+                1.1) JavaScript Objects
+                        
+                        
+
+                    example:
+                                let person = {
+                                        name="adarsh";
+                                        age=27;
+                                };
+
+                                console.log(person);
+
+                                // dot nottation
+
+                                person.name="arun";
+                                console.log(person.log);
+
+                                //bracket nottation
+
+                                person[name]='arun';
+
+                1.2) Arrays
+
+                    example:
+                                let selectColors=['red','blue'];
+                                selectColor[2]='green';
+                                console.log(slectColor);
+                                console.log(selectColor.length);
+
+                1.3 Functions
+                                Functions are the building blocks in java script
+
+                                example 1:
+
+                                function great(name, lastName){
+                                    console.log('Hello'+ name +' '+ lasName);
+                                }
+
+                                great(Arun, Lal);
+                                great(Depak, Kumar);
+
+                                example 2:
+
+                                function square(number){
+                                    return number*number;
+                                }
+
+                                console.log(square(2));
+
+                
