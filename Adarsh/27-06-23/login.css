@@ -1,0 +1,73 @@
+*{
+    margin-top: 11px;
+}
+
+
+.main{
+    text-align: center;
+   
+}
+
+#login{
+    font-size: 30px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+#welcome{
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.facebook{
+    background-color: rgb(0, 106, 255);
+    border: 0px;
+    width: 520px;
+    color: aliceblue;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: .5rem;
+}
+
+label{
+    display: block;
+    text-align: left;
+    margin-left: 33%;
+}
+
+input{
+    width: 500px;
+    padding: 10px;
+}
+
+.loginbtt{
+    width: 520px;
+    background-color: rgb(11, 7, 7);
+    color: aliceblue;
+    padding: 12px;
+    border: 0px;
+    font-size: 15px;
+    border-radius: .5rem;
+}
+
+#box{
+    border: 1px solid rgb(179, 213, 213);
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+}
+
+a{
+    color:rgb(191, 168, 190);
+}
+
+a:hover{
+    color:rgb(28, 11, 4);
+    
+}
+
+button:hover{
+    background-color: rgb(141, 150, 157);
+}
