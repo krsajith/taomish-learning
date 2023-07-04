@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="project11.css">
+
+    </head>
+    <body> 
+            
+            <div class="background-container">
+        <h1 class="stopwatch"> Stop Watch</h1>
+        <p style="font-size: 80px; color: white;" id = "counterElement"> 0</p>
+        <span><button class="button_1" id = "startButton"> Start</button>
+        <button class="button_2" id="stopButton">Stop </button> <button class = "button_3" id = "resetButton" onclick="reset()"> Reset </button></span>
+    </div>
+
+
+
+    <script>
+
+
+
+        let counter = document.getElementById("counterElement");
+        let counterValue = parseInt(counter.textContent); 
+      
+        let intervalId; 
+      
+        document.getElementById("startButton").addEventListener("click", function() {
+          intervalId = setInterval(function() {
+            counterValue += 1;
+            counter.textContent = counterValue; 
+          },100);
+        });
+
+        document.getElementById("stopButton").addEventListener("click", function() {
+    clearInterval(intervalId); 
+  });
+
+  document.getElementById("resetButton").addEventListener("click", function() {
+    clearInterval(intervalId); 
+    counterValue = 0; 
+    counter.textContent = counterValue; 
+  });
+
+
+
+      </script>
+      
+    
+    
+    </body>
+</html>

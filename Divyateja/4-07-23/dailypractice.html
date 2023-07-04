@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+         <body>
+            <h1> Local storage </h1>
+            <p> By using local storage we can store the data locally and can retrive the data whenever required </p>
+            <p>For storing data locally we use setItem() method to store </p>
+            <p> getItem() is used to retrive the data from the local storage </p>
+            <br>
+            <br>
+
+            <p>for converting js objects into string we use json as JSON itself is a plain text format </p>
+            <script> 
+                localStorage.setItem("fullName","Divyateja");
+                localStorage.setItem("Gender","Male");
+                
+
+
+               let fullName=  localStorage.getItem("fullName")
+                console.log(fullName)
+
+               let Gender = localStorage.getItem("Gender") 
+               console.log(Gender)
+
+
+               //to remove an item from the local storage we use  below code 
+
+               localStorage.removeItem("Gender"); // item gets removed from the local storage 
+
+
+               let profile = {
+                 name : "Divyateja ",
+                 age : 23,
+                 place : "Kakinada"
+               };
+
+            //  for Converting js object into json string we use stringify()
+
+               let new_string = JSON.stringify(profile)
+               console.log(new_string)
+               console.log(typeof(new_string))
+
+
+
+           //for converting JSON code into js object we use parse()    
+
+
+               let profile_object = JSON.parse(new_string)
+               console.log(profile_object)
+               console.log(typeof(profile_object))
+
+
+
+            //Array Methods 
+            
+            // Removing items-splice()
+
+            let myArray = [2.3,63,5,"six",89]
+           let deleted_array = myArray.splice(1,2) // this will return [2.3,"six",89] where 63 and 5 are deleted from the array 
+            console.log(myArray)
+
+            // to know the deleted items array 
+
+            
+            console.log(deleted_array)
+
+
+            // scedules 
+
+           // let counter = 0;
+            setInterval(function(){
+                console.log(counter);
+                counter= counter+1;
+
+            },1000)  // it 
+
+            </script>
+            
+        </body>
+</html>
