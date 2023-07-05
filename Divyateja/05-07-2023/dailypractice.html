@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+
+            <!-- Inline Event Listeners -->
+
+
+            <button onclick = "print_name()"> Click here </button>   
+
+
+            <!----------------------------------------------------------------------------->
+
+            <p> This clickhere output will be displayed in the console </p>
+            
+            <button id = "button_ele"> Click </button> <br>
+
+            <p id = "para"> Taomish India Private Limited </p>
+
+            <button id = 'btn' onclick="change_para()"> change </button> 
+
+
+            <button id = "add"> AddEvent </button> <br> <br>
+
+
+            <!-- KeyBoard Events --> 
+
+            <input type="text" id = "input_el">
+
+
+
+
+
+
+                <script> 
+                    function print_name(){
+                    console.log("Hi, I'm Teja..");
+                    }
+
+
+                    //OneventListeners 
+                    let button_el = document.getElementById("button_ele");
+                    button_el.onclick = function(){
+                        console.log("Hi, Good Morning");
+                    }
+
+
+                    //--------------------------------------------------------------------------------------------
+
+                
+                let para_element = document.getElementById("para")
+                 desc =  para_element.textContent
+
+                function change_para(){
+                        para_element.textContent= "Hiiiiiiii.... i'm Teja," + desc
+
+            }
+                  
+            
+            //------------------------------------------------------------------------------------------------------
+
+
+            // AddEventlisteners 
+                  let add_btn = document.getElementById("add")
+
+                  add_btn.addEventListener("click",function(){
+                    console.log("I'm from Andhra Pradesh ")
+                  })
+
+
+            //events 
+            
+            //keyboard Events 
+
+            let key = document.getElementById("input_el")
+            key.addEventListener("keydown",function(){
+                console.log("Key Pressed")   // open console to see the result 
+            })
+
+
+            key.addEventListener("keydown",function(event){
+                console.log(event.key)   // you can also use event.type, event.target, many more 
+            })
+
+
+
+           
+
+
+
+            
+                </script>
+
+        </body>
+    </head>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .background{
+                background-color: black;
+                width: auto;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;}
+                
+
+        </style>
+        
+    </head>
+        <body>
+            <div class="background">
+                <input id = "image_id"type="text" placeholder="Enter your code here" style="width: 250px; height: 35px; text-align: center; border-radius: 12px;"> 
+
+                <p style="color: white;" > The below bomb will explode if the timer reaches to zero, before that pls enter the code <strong style="font-size: 30px;">(defuse)</strong>  in the above textbox to stop</p> <br>
+
+                <img id = "image" src="https://img.freepik.com/free-vector/word-pow-with-bomb-explosive_1308-3299.jpg?w=740&t=st=1688540829~exp=1688541429~hmac=cd4ce23fc24b6dd192e317b070bfab7f02dc85491971501c2c0f7750e1b5534e" alt="Error in loading bomb image" style="height: 120px; width: 120px; margin-top: 0px;">
+
+                <p style="font-size: 70px; color: white; font-weight: bold;" id = "Timer"> 10 </p>
+
+
+            </div>
+
+
+
+
+
+            <script>
+             let count_time = document.getElementById("Timer")
+             time = parseInt(count_time.textContent)
+             let bomb_image = document.getElementById("image")
+            intervalId =  setInterval(function(){
+                time-=1 
+                count_time.textContent = time
+
+                if (time===0){
+
+                    bomb_image.src = "https://as2.ftcdn.net/v2/jpg/06/03/87/59/1000_F_603875963_pidW7XAPIVj7AEB1T4L56jJCyOBQNJck.jpg"
+                    bomb_image.style.width = "360px"
+                    bomb_image.style.height = "360px"
+
+                    count_time.textContent="Boom!!"
+                    count_time.style.color = "red"
+                    clearInterval(intervalId);
+                }
+            },1000)
+
+            let input_element = document.getElementById("image_id")
+            input_element.addEventListener("keydown",function(event) {
+                if (input_element.value === "defuse" && event.key==="Enter" && time!==0){
+                    count_time.textContent = "Congratulations,Bomb Defused :)"
+                    count_time.style.color = "green"
+                    
+
+
+                    clearInterval(intervalId)
+                    
+                }
+            })
+
+
+            </script>
+
+            
+        </body>
+</html> 
