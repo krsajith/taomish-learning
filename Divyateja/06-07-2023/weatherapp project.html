@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="weatherapp.css">
+    </head>
+
+    <body>
+        <div class="background-container">
+            <h1 style="font-size: 60px; color: rgb(202, 189, 189); font-family: cursive; font-weight: bold; margin-top: 60px;"> Weather Application<span> <img src="https://cdn-icons-png.flaticon.com/128/1163/1163661.png" alt="weather icon" style="height: 60px;"></span></h1>
+            <input class="input" type="search" placeholder="Enter City Name Here.." id="input_id"> <br><br>
+            <h1 style="color: white;" id="place">Paris,France</h1> <br>
+             <h1 id = "Datetime" style="color: rgb(229, 218, 218); font-size: 25px;"></h1> <br> 
+            <h1 style="font-size: 90px; font-weight: bold; color: white;" id="temp">23℃</h1>
+            <p style="font-size: 25px; color: white;" id="description">Wind</p> <br>
+        </div>
+
+        <script>
+            var cityInput = document.getElementById('input_id');
+            cityInput.addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    WeatherResult();
+                }
+            });
+
+            function WeatherResult() {
+                var city = cityInput.value;
+                var apiKey = '2fa73590fd8b5a4c6e68098ad5625395';
+                var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey;
+
+                fetch(apiUrl)
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(data) {
+                        showWeather(data);
+                    })
+                    .catch(function(error) {
+                        console.log("Error", error);
+                    });
+            }
+
+         
+
+            function showWeather(data) {
+                 let city_place = document.getElementById("place");
+                 let temp_place = document.getElementById("temp");
+                 let desc = document.getElementById("description");
+                  let d = Date();
+                  let date = document.getElementById("Datetime");
+                  date.innerText = d;
+
+                 
+
+                city_place.innerText = `${data.name}, ${data.sys.country}`;
+                temp_place.innerHTML = `${Math.round(data.main.temp-273)}<span>°C</span>`;
+                desc.innerText = data.weather[0].main;
+
+
+            }
+        </script>
+    </body>
+</html>

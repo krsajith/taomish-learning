@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+
+
+
+     <script>
+
+
+// fetch()
+
+      let options = {
+        method: "GET"
+      }
+
+      let url = "https://gorest.co.in/public-api/users";
+
+      fetch (url,options)
+
+
+
+      //Accessing HTTP Response   
+
+    
+
+
+      .then(function(response){
+        return response.text();
+
+      })
+
+      //converting json data into 
+
+      .then (function(data){
+        console.log(data)  //json data
+        let parsed_data = JSON.parse(data);
+        console.log(parsed_data) //  converted into js object 
+      })
+                   
+
+      let d = new Date();
+         console.log(d)
+
+
+     </script>
+    </body>
+</html>
