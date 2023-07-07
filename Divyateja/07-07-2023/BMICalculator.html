@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <style>
+        *{
+            margin: 0px;
+        }
+
+        .background{
+            background-color: rgb(196, 196, 196);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+
+        }
+
+        .input{
+            width: 95px;
+            height: 25px;
+            margin-block-start: 20px;
+            margin-right: 60px;
+            margin-top: 4px;
+        }
+
+        .card{
+            background-color: white;
+            border: auto solid;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        button{
+            background-color: rgb(215, 141, 75);
+            height: 37px;
+            padding: 10px;
+            margin-left: 100px;
+            border-radius: 5px;
+            color: white;
+        }
+     </style>
+     <title> BMI Calculator </title>
+    </head>
+
+    <body>
+        <div class="background">
+            <div class="card">
+                <h1 style="background-color: blue; color: white; font-family: cursive;"> BMI Calculator </h1> <br>
+                <span style="margin-block-start: 20px; margin-right: 60px;" > Height </span>
+                <span style="margin-left: 60px; margin-bottom: 10px;"> Weight </span>
+                <div>
+                    <span><input type="text" class="input" placeholder="Height in cm"> <input type="text" class="input" placeholder="Weight in kg"></span>
+                </div> <br> <br>
+
+                <button id="button"> Submit </button> 
+
+                <h1 id="result"></h1>
+                <span id = "des"></span>
+            </div>
+          
+        </div>
+
+        <script>
+           let heightInput = document.getElementsByClassName("input")[0];
+        let weightInput = document.getElementsByClassName("input")[1];
+        let resultEl = document.getElementById("result");
+        let submitBtn = document.getElementById("button");
+        let description = document.getElementById("des")
+
+         submitBtn.addEventListener("click", function () {
+            let heightValue = parseInt(heightInput.value);
+            let weightValue = parseInt(weightInput.value);
+
+            let sq = Math.pow(heightValue, 2);
+            let res = (weightValue / sq) * 10000;
+            let final_res = res.toFixed(2)
+            
+
+            resultEl.textContent = final_res;
+           if (final_res<18.5){
+               description.textContent = "-Underweight 😪"
+               description.style.color = "red"
+           }
+
+           else if (final_res>18.5 && final_res<24.9){
+              description.textContent = "-Normal or Healthy Weight 🥳"
+              description.style.color = "green"
+           } 
+
+            else if (final_res>25.0 && final_res<29.9){
+              description.textContent = "-Overweight 😪"
+              description.style.color = "red"
+           } 
+
+           else if (final_res>29.9){
+            description.textContent = "-Obese 😪"
+            description.style.color = "red"
+           }
+
+           else {
+            
+            description.textContent = "❌ Pls Enter Height and Weight.."
+            description.style.color = "red"
+
+           }
+});
+
+        </script>
+    </body>
+</html>
