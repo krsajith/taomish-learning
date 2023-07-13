@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    padding-top: 10%;
+    background-color: rgb(113, 186, 228);
+}
+
+p{
+    font-size: 30px;
+}
+
+.addbtn {
+    background-color: rgb(13, 12, 12);
+    color: aliceblue;
+    border: 0px;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+}
