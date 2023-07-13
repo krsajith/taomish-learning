@@ -1,9 +1,14 @@
-//adding days using external package 
+const express = require("express");
+const app = express();
+
+app.get("/", (request, response) => {
+    response.send("Hello World!");
+});
 
 
-const addDays = require('date-fns/addDays');
-const result = addDays(new Date(2021,0,20),3);
-const localDate = result.toLocaleDateString();
-console.log(localDate);
+
+
+
+app.listen(4000);
 
 
