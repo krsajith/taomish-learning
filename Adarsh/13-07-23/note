@@ -1,0 +1,88 @@
+
+1) Type Conversion/Coercion
+   
+        Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers).
+        Type conversion is similar to type coercion because they convert values from one data type to another with one key difference — type coercion is implicit. 
+        In contrast, type conversion can be either implicit or explicit.
+                Type conversion (or typecasting) means transfer of data from one data type to another. Implicit conversion happens when the compiler (for compiled languages) or runtime (for script languages like JavaScript) automatically converts data types. 
+                The source code can also explicitly require a conversion to take place.
+
+        For example, given the expression "foo" + 1, the Number 1 is implicitly converted into a String and the expression returns "foo1". Given the instruction Number("0x11"), the string "0x11" is explicitly converted to the number 17.
+
+    1.1) Type casting in JavaScript
+
+            Type casting means conversion of one data type to another explicitly. In JavaScript some of the most common methods to convert a datatype to either string using String(), to boolean using Boolean(), or to number using Number().
+
+2) Asynchronous JavaScript
+        Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
+
+        Many functions provided by browsers, especially the most interesting ones, can potentially take a long time, and therefore, are asynchronous. For example:
+
+            Making HTTP requests using fetch()
+            Accessing a user’s camera or microphone using getUserMedia()
+            Asking a user to select files using showOpenFilePicker()
+
+3) Working with APIs
+        When working with remote APIs, you need a way to interact with those APIs. Modern JavaScript provides two native ways to send HTTP requests to remote servers, XMLHttpRequest and Fetch.
+
+4) JSON
+        JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).
+
+        4.1) JSON structure
+                JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:
+
+                        JSON
+                        Copy to Clipboard
+
+                        {
+                        "squadName": "Super hero squad",
+                        "homeTown": "Metro City",
+                        "formed": 2016,
+                        "secretBase": "Super tower",
+                        "active": true,
+                        "members": [
+                        {
+                        "name": "Molecule Man",
+                        "age": 29,
+                        "secretIdentity": "Dan Jukes",
+                        "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+                        },
+                        {
+                        "name": "Madame Uppercut",
+                        "age": 39,
+                        "secretIdentity": "Jane Wilson",
+                        "powers": [
+                                "Million tonne punch",
+                                "Damage resistance",
+                                "Superhuman reflexes"
+                        ]
+                        },
+                        {
+                        "name": "Eternal Flame",
+                        "age": 1000000,
+                        "secretIdentity": "Unknown",
+                        "powers": [
+                                "Immortality",
+                                "Heat Immunity",
+                                "Inferno",
+                                "Teleportation",
+                                "Interdimensional travel"
+                        ]
+                        }
+                        ]
+                        }
+
+5) Exception Handling
+        In JavaScript, all exceptions are simply objects. While the majority of exceptions are implementations of the global Error class, any old object can be thrown. With this in mind, there are two ways to throw an exception: directly via an Error object, and through a custom object. 
+
+6) Strict Mode
+        JavaScript’s strict mode is a way to opt-in to a restricted variant of JavaScript, thereby implicitly opting out of “sloppy mode”. Strict mode isn’t just a subset: it intentionally has different semantics from regular code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don’t rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist so that scripts can opt into strict mode incrementally.
+
+        Strict mode makes several changes to normal JavaScript semantics:
+
+        Eliminates some JavaScript silent errors by changing them to throw errors.
+        Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes run faster than identical code that’s not strict mode.
+        Prohibits some syntax likely to be defined in future versions of ECMAScript.
+
+7) Classes
+        Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but have some syntax and semantics that are not shared with ES5 class-like semantics.

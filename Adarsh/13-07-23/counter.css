@@ -1,0 +1,16 @@
+body {
+    margin-top: 10%;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+button {
+    background-color: aqua;
+    border: 0px;
+    border-radius: 10px;
+    height: 30px;
+    width: 90px;
+    margin: 5px;
+}
