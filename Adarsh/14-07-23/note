@@ -1,0 +1,40 @@
+
+1) setTimeout() global function
+        The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
+
+        1.1) Working with asynchronous functions
+                setTimeout() is an asynchronous function, meaning that the timer function will not pause execution of other functions in the functions stack. In other words, you cannot use setTimeout() to create a "pause" before the next function in the function stack fires.
+
+                        setTimeout(() => {
+                        console.log("this is the first message");
+                        }, 5000);
+                        setTimeout(() => {
+                        console.log("this is the second message");
+                        }, 3000);
+                        setTimeout(() => {
+                        console.log("this is the third message");
+                        }, 1000);
+
+                        // Output:
+
+                        // this is the third message
+                        // this is the second message
+                        // this is the first message
+
+
+2) setInterval
+        The setInterval() method helps us to repeatedly execute a function after a fixed delay.
+        It returns a unique interval ID which can later be used by the clearInterval() method, which stops further repeated execution of the function.
+
+        setInterval() is similar to setTimeout, with a difference. 
+        Instead of running the callback function once, it will run it forever, at the specific time interval you specify (in milliseconds).
+
+3) Prototypal Inheritance
+        The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. 
+        It is a method by which an object can inherit the properties and methods of another object. 
+        Traditionally, in order to get and set the Prototype of an object, we use Object.getPrototypeOf and Object.
+
+        3.1) Prototype
+                In JavaScript, objects have a special hidden property [[Prototype]] (as named in the specification), that is either null or references another object. That object is called “a prototype”:
+        
+        
