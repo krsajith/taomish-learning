@@ -1,0 +1,35 @@
+
+
+
+body {
+    background-color: rgb(45, 83, 179);
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+label {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-content {
+    display: flex;
+}
+
+#city-name {
+    border: 0px;
+    border-radius: 25px;
+    padding: 10px;
+}
