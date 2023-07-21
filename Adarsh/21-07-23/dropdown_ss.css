@@ -1,0 +1,42 @@
+
+* {
+    margin: .5rem;
+}
+
+.box {
+    width: 12.5rem;
+    background: #eaedee;
+    padding: 1rem;
+}
+
+.box-select option:first-child {
+        display:none;
+}
+
+p {
+    color: #767676;;
+    font-family: Raleway;
+    font-style: normal;
+}
+
+p::after {
+    content: '*';
+    color: red;
+    font-size: 1rem;
+}
+
+select {
+    box-sizing: border-box;
+    color: #5A5A5A;
+    width: 11.25rem;
+    height: 2.5rem;
+    border-radius: 2px;
+    border: 0;
+}
+
+.other {
+    font-weight: bold;
+}
+
+
+
