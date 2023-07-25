@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figmadesign</title>
+    <link rel="stylesheet" href="figmadesign.css" />
+    <script src="designfigma.js"></script>
+  </head>
+  <body>
+    <!--Date Input-->
+
+    <div class="dotted_border">
+      <p class="label">Label <img src="Counterparty.svg" alt="starmark" /></p>
+      <input class="date-input" type="date" /> <br />
+
+      <!-- Disabled date -->
+
+      <p class="label">Label <img src="Counterparty.svg" alt="" /></p>
+      <input class="date-input date-innput-disabled" type="date" disabled />
+    </div>
+    <br />
+
+    <!--Input Number circle v1 -->
+    <div class="dotted_border">
+      <p class="label">Label</p>
+      <div class="number_input">
+        <img
+          onclick="decrease()"
+          src="akar-icons_circle-minus-fill.svg"
+          alt="minus"
+        />
+
+        <p id="counterValue">0</p>
+        <img
+          onclick="increase()"
+          src="akar-icons_circle-plus-fill.svg"
+          alt=""
+        />
+      </div>
+
+      <!--Input Number circle v1 (disabled)-->
+
+      <p class="label">Label</p>
+      <div class="number_input" onclick="disable()" hover="disable()">
+        <img src="akar-icons_circle-minus-fill -2.svg" alt="minus" />
+        <p id="counterValue_0">0</p>
+        <img src="akar-icons_circle-plus-fill -1.svg" alt="" />
+      </div>
+    </div>
+    <br />
+    <br /><br />
+
+    <!--radio Buttons -->
+
+    <div class="dotted_border">
+      <input type="radio" class="input" /> <span class="radio_button_label">Label</span> <br /><br />
+      <input type="radio" class="input" /> <span>Label</span><br /><br />
+      <input type="radio" class="input" /> <span>Label</span> <br /><br />
+      <input type="radio" disabled /> <span class="radio_button_label_disabled">Label</span>
+    </div>
+    <br /><br />
+
+    <!-- Toogle Switch-->
+    <div class="dotted_border">
+
+   <div class="display_toogle" onclick="highlight()">
+   <span class="toogle_button_label toogle_text" id="txt_1">DF</span> <span>
+    <label class="switch">
+      <input type="checkbox" id="btn"/>
+      <span class="slider round"></span>
+    </label></span> <span class="toogle_button_label" id="txt_2">NDF</span> </div> <br>
+
+
+    
+    
+</div> <br><br>
+
+<!-- Buy/ Sell toogles-->
+
+
+<div class="dotted_border">
+
+  <div class="display_toogle" onclick="highlight_2()">
+  <span class="toogle_button_label" id="txt_3">Buy</span> <span>
+   <label class="switch">
+     <input type="checkbox" id="btn_2"/>
+     <span class="slider_1 round"></span>
+   </label></span> <span class="toogle_button_label" id="txt_4">Sell</span> </div> <br>
+
+
+   
+</div> <br>
+
+
+
+<div class="dotted_border">
+  <input type="checkbox" class="input"> <span>Label</span> <br><br>
+  <input type="checkbox"class="input"> <span>Label</span><br><br>
+  <input  type="checkbox" disabled > <span class="checklabel">Label</span>
+
+</div>
+
+
+
+
+
+  </body>
+</html>
