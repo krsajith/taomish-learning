@@ -1,0 +1,80 @@
+:root {
+    --color-1: #cbd4d7a1;
+    --color-2: #FBFBFB;
+    --color-3: #767676;
+    --color-4: #15094E;
+    --color-5: #000;
+    --color-6: #C4C4C4;
+    --color-7: #FFF;
+    --color-8: #15104E;
+
+    --select-box-height: 4.5rem;
+    --select-box-width: 20rem;
+
+    --value-1: .3rem;
+    --value-2: 1rem;
+    --value-3: 1.25rem;
+    --value-4: 10rem;
+    --value-5: 0.875rem;
+    --value-6: 1.8125rem;
+    --value-7: .063rem;
+    --value-8: .25rem;
+
+    --font-size-1: 1.3rem;
+
+    --font-family-1: 'Raleway';
+}
+
+body {
+    background-color: var(--color-1);
+}
+
+.container {
+    width: 25rem;
+    height: auto;
+    padding: var(--value-2);
+    border: .2rem solid rgb(91, 151, 201);
+    border-style: dashed;
+    margin: 3rem;
+}
+
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-content {
+    display:flex;
+    background: var(--color-2);
+    width: var(--value-4);
+    padding: var(--value-5) var(--value-6);
+    border: var(--value-7) solid var(--color-6);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-5);
+    background-color: var(--color-2);
+    font-family: var(--font-family-1);
+    font-size: var(--space-2);
+    font-style: normal;
+    line-height: var(--value-3);
+    cursor: pointer;
+}
+
+.switch:nth-child(1) {
+    border-radius: var(--value-8) 0rem 0rem var(--value-8);
+    font-weight: 500;
+}
+
+.switch:nth-child(2) {
+    border-radius: 0rem var(--value-8) var(--value-8) 0rem;
+    font-weight: 400;
+}
+
+.switch-style {
+    background-color: var(--color-4);
+    color: var(--color-7);
+    border: var(--value-7) solid  var(--color-6);
+}
