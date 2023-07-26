@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="figma.css">
+    <title>Drop Down</title>
+</head>
+<body>
+
+    <!--Drop Down Single Select-->
+
+        <div class="container">
+
+            <div class="label">
+                <span>Label
+                <img src="Counterparty.png" alt="Mandatory Icon">
+                </span>
+            </div>
+            
+            <div  id="selectid" class="select-box select">
+                <p id="select-text" class="select-content">select</p>
+                <img src="down-arrow.png" alt="Down Arrow" id="select-arrow">
+            </div>
+            <ul id="list" class="hide">
+                <li class="select options">Label 1</li>
+                <li class="select options">OLAM</li>
+                <li class="select options">TESCO</li>
+                <li class="select options">IFFCO</li>
+                <li class="select options">+Add Other</li>
+            </ul>
+        </div>
+
+
+    <!--Radio Option-->
+
+        <div class="container">
+            
+            <div class="label">
+                <span>Label
+                <img src="Counterparty.png" alt="Mandatory Icon">
+                </span>
+            </div>
+            
+            <div class="radio-container">
+                
+                <span id="radio-btn-one" class="radio-btn btn1"><input type="radio" name="label" value="label1" id="label-one">
+                <label for="label1"></label>Label</span>
+                <span id="radio-btn-two" class="radio-btn btn2"><input type="radio" name="label" value="label2" id="label-two">
+                <label for="label-2"></label>Label</span>
+                    
+            </div>
+
+        </div>
+
+    <!-- Content Switch-->
+
+        <div class="container">
+
+            <div class="switch-container switch">
+                <span id="cash-id" class="switch-content switch">Cash</span>
+                <span id="forward-id" class="switch-content switch">Forward</span>
+
+            </div>
+        
+        </div>
+            
+        
+        
+        <script src="figma.js"></script>
+        
+</body>
+</html>

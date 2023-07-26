@@ -1,0 +1,166 @@
+
+html{
+    font-size: 62.5%;
+}
+
+:root {
+    --color-1: #cbd4d7a1;
+    --color-2: #FFFFFF;
+    --color-3: #767676;
+    --color-4: #15104E;
+
+    --height: 4.5rem;
+    --width: 20rem;
+
+    --space-1: .3rem;
+    --space-2: 1rem;
+
+    --font-size-1: 1.3rem;
+
+    --font-family-1: Raleway;
+}
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+body {
+    background-color: var(--color-1);
+    font-size: 2rem;
+    
+}
+
+.container {
+    width: 25rem;
+    height: auto;
+    border: .2rem solid rgb(91, 151, 201);
+    border-style: dashed;
+    margin: 3rem;
+    padding: var(--space-2);
+}
+
+/* Drop Down Single Select */
+
+.label {
+    margin-top: 2rem;
+    color: var(--color-3);
+    font-family: var(--font-family-1);
+    font-size: var(--font-size-1);
+    font-style: normal;
+    font-weight: 60rem;
+    line-height: 1.5rem;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.select {
+    width: var(--width);
+    height: var(--height);
+    box-sizing: border-box;
+    background-color: var(--color-2);
+    color: var(--color-3);
+    border-radius: var(--space-1);
+    cursor: pointer;
+
+}
+
+.select-box {
+    margin-top: var(--space-2);
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .select-content {
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .5;
+}
+
+.select-box img {
+    width: 2rem;
+    height: 2rem;
+    
+}
+
+.options {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    list-style: none;
+}
+
+.options:last-child {
+    font-weight: bold;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* Radio Option */
+
+.radio-container {
+    display: flex;
+    gap: 0;
+}
+
+.radio-btn {
+    margin-top: var(--space-2);
+    color: var(--color-4);
+    font-family: var(--font-family-1);
+    font-size: var(--font-size-1);
+    font-style: normal;
+    font-weight: 50rem;
+    line-height: 1.5rem; 
+    display: inline-flex;
+    padding: 1.2rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;  
+    border: .1rem solid #A7A7A7;
+
+}
+.btn1 {
+    border-radius: .4rem 0rem 0rem .4rem;
+}
+
+.btn2 {
+    border-radius: 0rem .4rem .4rem 0rem;
+}
+
+input[type="radio"]{
+    accent-color: #15094E
+}
+.radio-select {
+    border:.1rem solid #15104E;  
+}
+
+/* Content Switch */
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-container {
+    width: auto;
+    height: 4.8rem;
+}
+
+.switch-content {
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-2);
+    cursor: pointer;
+    border-radius: var(--space-1);
+}
+
+.switch-style {
+    background-color: var(--color-4);
+    color: var(--color-2);
+}
